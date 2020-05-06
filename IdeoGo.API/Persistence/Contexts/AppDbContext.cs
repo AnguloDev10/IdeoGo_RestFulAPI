@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IdeoGo.API.Domain.Persistences
+namespace IdeoGo.API.Domain.Persistences.Contexts
 {
     public class AppDbContext: DbContext
     {

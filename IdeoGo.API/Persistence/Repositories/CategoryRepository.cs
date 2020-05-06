@@ -1,5 +1,6 @@
 ﻿using IdeoGo.API.Domain.Models;
 using IdeoGo.API.Domain.Persistences;
+using IdeoGo.API.Domain.Persistences.Contexts;
 using IdeoGo.API.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;

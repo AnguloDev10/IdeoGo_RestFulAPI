@@ -1,4 +1,5 @@
 ﻿using IdeoGo.API.Domain.Persistences;
+using IdeoGo.API.Domain.Persistences.Contexts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
