@@ -19,6 +19,6 @@ namespace IdeoGo.API.Domain.Models
 
         public IList<User> Users { get; set; } = new List<User>();
         
-         public User User{get; set;}//relacion 1 a 1 con user
+        public User User{get; set;}//relacion 1 a 1 con user
     }
 }

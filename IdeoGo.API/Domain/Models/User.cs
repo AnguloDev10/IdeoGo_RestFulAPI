@@ -20,9 +20,9 @@ namespace IdeoGo.API.Domain.Models
 
         public string Experience { get; set; }
 
-        public Account account { get; set; }
+        public Account account { get; set; } // relacion con account
 
-        public int accountId { get; set; }
+        public int accountId { get; set; } // relacion con account
 
        // public IList<Project> Projects { get; set; } = new List<Project>();
  

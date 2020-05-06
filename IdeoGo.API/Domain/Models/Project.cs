@@ -30,18 +30,10 @@ namespace IdeoGo.API.Domain.Models
         public int CategoryId { get; set; }
         public Category Categories { get; set; }
 
-    
-
+        public Entrepreneur Entrepreneur{get;set;}
 
 
     }
 
+    }
 
-
-
-
-
-
-
-
-}
