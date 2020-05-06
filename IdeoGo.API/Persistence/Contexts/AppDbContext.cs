@@ -24,7 +24,7 @@ namespace IdeoGo.API.Domain.Persistences.Contexts
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(builder);//padredacscscvsv
+            base.OnModelCreating(builder);//padredacategory
             //CategoryEntity
             builder.Entity<Category>().ToTable("Categories");
             builder.Entity<Category>().HasKey(p => p.Id);//llave primaria
