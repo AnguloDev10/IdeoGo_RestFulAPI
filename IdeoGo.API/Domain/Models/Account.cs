@@ -17,8 +17,8 @@ namespace IdeoGo.API.Domain.Models
 
         public bool Payment { get; set; }
 
-        ///public IList<User> Users { get; set; } = new List<User>();
+        public IList<User> Users { get; set; } = new List<User>();
         
-
+         public User User{get; set;}//relacion 1 a 1 con user
     }
 }

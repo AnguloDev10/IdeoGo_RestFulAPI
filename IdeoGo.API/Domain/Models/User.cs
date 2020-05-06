@@ -14,13 +14,13 @@ namespace IdeoGo.API.Domain.Models
 
         public string Name { get; set; }
 
-        public Gender Gender { get; set; }
+        public string Sex { get; set; }
 
         public string Occupation { get; set; }
 
         public string Experience { get; set; }
 
-        public Account Account { get; set; }
+        public Account account { get; set; }
 
         public int accountId { get; set; }
 

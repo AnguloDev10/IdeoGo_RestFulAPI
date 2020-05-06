@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\IdeoGo.API",
+    "\\IdeoGo.API\\Controllers",
+    "\\IdeoGo.API\\Domain",
+    "\\IdeoGo.API\\Domain\\Models"
   ],
-  "SelectedNode": "\\IdeoGo.API.sln",
+  "SelectedNode": "\\IdeoGo.API\\Domain\\Models\\Account.cs",
   "PreviewInSolutionExplorer": false
 }
