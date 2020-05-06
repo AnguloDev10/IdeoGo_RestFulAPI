@@ -15,6 +15,7 @@ namespace IdeoGo.API
     {
         public static void Main(string[] args)
         {
+            // Comentario
             // CreateHostBuilder(args).Build().Run();
             var host = CreateHostBuilder(args).Build();
             using(var scope = host.Services.CreateScope())

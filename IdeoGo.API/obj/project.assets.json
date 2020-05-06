@@ -5218,11 +5218,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Monke\\OneDrive\\Escritorio\\Nueva carpeta\\IdeoGo.API\\IdeoGo.API\\IdeoGo.API.csproj",
+      "projectUniqueName": "C:\\Users\\Monke\\Source\\Repos\\AnguloVallleWilliam\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
       "projectName": "IdeoGo.API",
-      "projectPath": "C:\\Users\\Monke\\OneDrive\\Escritorio\\Nueva carpeta\\IdeoGo.API\\IdeoGo.API\\IdeoGo.API.csproj",
+      "projectPath": "C:\\Users\\Monke\\Source\\Repos\\AnguloVallleWilliam\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
       "packagesPath": "C:\\Users\\Monke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Monke\\OneDrive\\Escritorio\\Nueva carpeta\\IdeoGo.API\\IdeoGo.API\\obj\\",
+      "outputPath": "C:\\Users\\Monke\\Source\\Repos\\AnguloVallleWilliam\\IdeoGo_RestFulAPI\\IdeoGo.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

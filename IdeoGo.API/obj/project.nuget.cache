@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PqaUiQ3Pl8QuUCx/VJ+LhTekU+bmpAvOBIQ2E75Co1kak7vE6JGT7I3WeqjEgUHJf9xkEHR+wSLKiBu8Acm1eA==",
+  "dgSpecHash": "QWQqv3IEMFdkRun4k11bTXqhFnVWh7S+LnO4TgFCZ2D4Xdow3vHwGP3Y0YVj9q9/BcAtxugMoAkx1SBjCCoFwA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Monke\\OneDrive\\Escritorio\\Nueva carpeta\\IdeoGo.API\\IdeoGo.API\\IdeoGo.API.csproj",
+  "projectFilePath": "C:\\Users\\Monke\\Source\\Repos\\AnguloVallleWilliam\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Monke\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\Monke\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
