@@ -15,6 +15,12 @@ namespace IdeoGo.API.Domain.Models
         public string Description { get; set; }
 
         //Relationships
+        public int EntrepreneurId { get; set; }
+        public Entrepreneur Entrepreneur { get; set; }
+
+        public int CollaboratorId { get; set; }
+        public Collaborator Collaborator { get; set; }
+
 
 
     }

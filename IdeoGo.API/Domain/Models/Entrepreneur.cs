@@ -7,8 +7,11 @@ namespace IdeoGo.API.Domain.Models
 {
     public class Entrepreneur : User
     {
-  
-    public IList<Project> Projects { get; set; } = new List<Project>();
+
+        public int ProfileId { get; set; }
+        public Profile Profile { get; set; }
+
+        public IList<Project> Projects { get; set; } = new List<Project>();
     public IList<Request> Requests { get; set; } = new List<Request>();
 
     

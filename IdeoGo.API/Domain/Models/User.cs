@@ -24,7 +24,7 @@ namespace IdeoGo.API.Domain.Models
 
         public int accountId { get; set; }
 
-        public IList<Project> Projects { get; set; } = new List<Project>();
+       // public IList<Project> Projects { get; set; } = new List<Project>();
  
     }
 }
