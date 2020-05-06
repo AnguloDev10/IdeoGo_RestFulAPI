@@ -17,7 +17,10 @@ namespace IdeoGo.API.Domain.Models
         public string Description { get; set; }
        
         public DateTime CreateAt { get; set; }
-        
+
+        public int EntrepreneurId { get; set; }
+        public Entrepreneur Entrepreneur { get; set; }
+
 
 
     }

@@ -17,9 +17,11 @@ namespace IdeoGo.API.Domain.Models
         public string Note { get; set; }
 
         //RelationShip
-        
+
         public int CollaboratorId { get; set; }
 
+        public Collaborator Collaborator { get; set; }
+        public int ProjectId { get; set; }
         public Project Project { get; set; }
 
     }

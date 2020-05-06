@@ -17,10 +17,13 @@ namespace IdeoGo.API.Domain.Models
         public int CollaboratorId { get; set; }
         public Collaborator Collaborator { get; set; }
 
+        public int RegistryId { get; set; }
+        public Registry Registry { get; set; }
 
-        public int EntrpreneurId { get; set; }
 
-        public Entrepreneur Entrepreneur { get; set; }
+        //public int EntrpreneurId { get; set; }
+
+        //public Entrepreneur Entrepreneur { get; set; }
 
         //public int InternshipId { get; set; }
         //public Internship Internship { get; set; }
@@ -30,3 +33,4 @@ namespace IdeoGo.API.Domain.Models
 
     }
 }
+

@@ -14,7 +14,7 @@ namespace IdeoGo.API.Domain.Models
 
         public string Name { get; set; }
 
-        public string Sex { get; set; }
+        public Gender Gender { get; set; }
 
         public string Occupation { get; set; }
 
@@ -25,6 +25,7 @@ namespace IdeoGo.API.Domain.Models
         public int accountId { get; set; }
 
         public IList<Project> Projects { get; set; } = new List<Project>();
- 
+
+
     }
 }
