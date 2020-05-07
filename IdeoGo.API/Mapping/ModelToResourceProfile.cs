@@ -12,7 +12,7 @@ namespace IdeoGo.API.Mapping
     {
         public ModelToResourceProfile()
         {
-            CreateMap<Category, CtegoryResource>();
+            CreateMap<Collaborator, GoalResource>();
         }
     }
 }
