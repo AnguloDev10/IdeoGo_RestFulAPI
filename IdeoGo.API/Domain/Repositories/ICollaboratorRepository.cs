@@ -12,5 +12,11 @@ namespace IdeoGo.API.Domain.Repositories
 
         Task<IEnumerable<Collaborator>> ListAsync();
         Task AddAsync(Collaborator collaborator);
+
+        Task<Collaborator> FindByIDAsync(int id);
+        void Update(Collaborator collaborator);
+        void Update(Task<Collaborator> existingCategory);
+
+        void Remove(Collaborator collaborator);
     }
 }

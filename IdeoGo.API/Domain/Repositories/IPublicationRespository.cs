@@ -10,5 +10,9 @@ namespace IdeoGo.API.Domain.Repositories
     {
         Task<IEnumerable<Publication>> ListAsync();
         Task AddAsync(Publication publication);
+        void Update(Publication publication);
+        void Remove(Publication publication);
+        Task<Publication> FindByIDAsync(int id);
     }
 }
+

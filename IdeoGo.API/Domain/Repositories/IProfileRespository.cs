@@ -11,8 +11,11 @@ namespace IdeoGo.API.Domain.Repositories
 
         Task<IEnumerable<Profile>> ListAsync();
         Task AddAsync(Profile profile);
+        void Update(Profile profile);
+        void Remove(Profile profile);
 
+        Task<Profile> FindByIDAsync(int id);
     }
 
-
 }
+

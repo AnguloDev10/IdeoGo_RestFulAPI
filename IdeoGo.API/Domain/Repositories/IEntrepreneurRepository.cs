@@ -12,5 +12,6 @@ namespace IdeoGo.API.Domain.Repositories
         Task AddAsync(Entrepreneur entrepreneur);
         void Update(Entrepreneur entrepreneur);
         void Remove(Entrepreneur entrepreneur);
+        Task<Entrepreneur> FindByIDAsync(int id);
     }
 }

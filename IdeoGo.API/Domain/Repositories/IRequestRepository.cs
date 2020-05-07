@@ -10,5 +10,11 @@ namespace IdeoGo.API.Domain.Repositories
     {
         Task<IEnumerable<Request>> ListAsync();
         Task AddAsync(Request request);
+
+        void Update(Request request);
+        void Remove(Request request);
+
+        Task<Request> FindByIDAsync(int id);
     }
 }
+

@@ -10,5 +10,11 @@ namespace IdeoGo.API.Domain.Repositories
     {
         Task<IEnumerable<Category>> ListAsync();
         Task AddAsync(Category category);
+
+        Task<Category> FindByIDAsync(int id);
+        void Update(Category category);
+        void Update(Task<Category> existingCategory);
+
+        void Remove(Category category);
     }
 }
