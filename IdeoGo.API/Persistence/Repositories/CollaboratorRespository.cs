@@ -19,9 +19,29 @@ namespace IdeoGo.API.Persistence.Repositories
             await _context.Collaborators.AddAsync(collaborator);
         }
 
+        public Task<Collaborator> FindByIDAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<IEnumerable<Collaborator>> ListAsync()
         {
             return await _context.Collaborators.ToListAsync();
+        }
+
+        public void Remove(Collaborator collaborator)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Collaborator collaborator)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Task<Collaborator> existingCategory)
+        {
+            throw new NotImplementedException();
         }
     }
 }

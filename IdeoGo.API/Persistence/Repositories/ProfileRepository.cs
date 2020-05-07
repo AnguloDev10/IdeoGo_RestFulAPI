@@ -19,7 +19,22 @@ namespace IdeoGo.API.Persistence.Repositories
             throw new NotImplementedException();
         }
 
+        public Task<AutoMapper.Profile> FindByIDAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<IEnumerable<AutoMapper.Profile>> ListAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove(AutoMapper.Profile profile)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(AutoMapper.Profile profile)
         {
             throw new NotImplementedException();
         }

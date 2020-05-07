@@ -32,6 +32,11 @@ namespace IdeoGo.API.Persistence.Repositories
         {
             _context.Enterpreneurs.Remove(entrepreneur);
         }
+
+        public Task<Entrepreneur> FindByIDAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 

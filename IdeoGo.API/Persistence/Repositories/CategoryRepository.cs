@@ -19,9 +19,35 @@ namespace IdeoGo.API.Persistence.Repositories
             await _context.Category.AddAsync(category);
         }
 
+
+        public async Task<Category> FindByIDAsync(int id)
+        {
+            return await _context.Category.FindAsync(id);
+        }
+
         public async Task<IEnumerable<Category>> ListAsync()
         {
             return await _context.Category.ToListAsync();
+        }
+
+        public void Remove(Category category)
+        {
+            _context.Category.Remove(category);
+        }
+
+        public void Update(Category category)
+        {
+            _context.Category.Update(category);
+        }
+
+        public void Update(Task<Category> existingCategory)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<IEnumerable<Category>> ICategoryRepository.ListAsync()
+        {
+            throw new NotImplementedException();
         }
     }
 }
