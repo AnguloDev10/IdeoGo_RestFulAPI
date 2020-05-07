@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Domain.Services
 {
-    public interface IGoalService
+    public interface ITagService
     {
-        Task<IEnumerable<Goal>> ListAsync();
+        Task<IEnumerable<Tag>> ListAsync();
+        Task<TagResponse> SaveAsync(Tag tag);
 
-        Task<GoalResponse> SaveAsync(Goal goal);
-
-        Task<GoalResponse> UpdateAsync(int id, Goal goal);
-        Task<GoalResponse> DeleteAsync(int id);
+        Task<TagResponse> UpdateAsync(int id, Tag tag);
+        Task<TagResponse> DeleteAsync(int id);
     }
 }

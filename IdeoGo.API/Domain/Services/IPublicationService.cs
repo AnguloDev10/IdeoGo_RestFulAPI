@@ -9,6 +9,10 @@ namespace IdeoGo.API.Domain.Services
     public interface IPublicationService
     {
         Task<IEnumerable<Publication>> ListAsync();
+        Task<PublicationResponse> SaveAsync(Publication publication);
+
+        Task<PublicationResponse> UpdateAsync(int id, Publication publication);
+        Task<PublicationResponse> DeleteAsync(int id);
     }
 
 }
