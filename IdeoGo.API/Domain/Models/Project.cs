@@ -15,9 +15,9 @@ namespace IdeoGo.API.Domain.Models
 
         //public int CollaboratorId { get; set; }
 
-        //public User user { get; set; }
+        public User user { get; set; }
 
-        //public int userId { get; set; }
+        public int userId { get; set; }
 
         //public int UserId;
         //internal object Categories;
@@ -26,7 +26,8 @@ namespace IdeoGo.API.Domain.Models
 
         //public IList<Collaborator> Collaborator { get; set; } = new List<Collaborator>();
 
-
+        public Tag tag { get; set; }
+        public int tagId { get; set; }
         public int CategoryId { get; set; }
         public Category Categories { get; set; }
 
