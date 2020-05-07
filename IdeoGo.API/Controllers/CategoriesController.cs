@@ -26,10 +26,10 @@ namespace IdeoGo.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<CtegoryResource>> GetAllAsync()
+        public async Task<IEnumerable<GoalResource>> GetAllAsync()
         {
             var categories = await _categoryService.ListAsync();
-            var resources = _mapper.Map<IEnumerable<Category>, IEnumerable<CtegoryResource>>(categories);
+            var resources = _mapper.Map<IEnumerable<Category>, IEnumerable<GoalResource>>(categories);
             return resources;
         }
     }
