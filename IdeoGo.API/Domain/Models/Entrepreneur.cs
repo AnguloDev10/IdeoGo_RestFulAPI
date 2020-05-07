@@ -13,7 +13,7 @@ namespace IdeoGo.API.Domain.Models
         public Profile Profile { get; set; }
 
         public IList<Project> Projects { get; set; } = new List<Project>();
-        public IList<Publication> Publications { get; set; } = new List<Publication>();
+        public IList<Tag> Publications { get; set; } = new List<Tag>();
         //public IList<Request> Requests { get; set; } = new List<Request>();
 
     
