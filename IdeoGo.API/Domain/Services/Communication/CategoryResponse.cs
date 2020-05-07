@@ -8,6 +8,8 @@ namespace IdeoGo.API.Domain.Services.Communication
 {
     public class CategoryResponse : BaseResponse
     {
+        private Category existingCategory;
+
         public Category Category { get; private set; }
 
         public CategoryResponse(bool success, string message, Category category) : base(success, message) ///pasa la llamada a el constructor del padre
@@ -25,5 +27,7 @@ namespace IdeoGo.API.Domain.Services.Communication
         {
             ///Escenario triste
         }
+
+     
     }
 }
