@@ -1,6 +1,7 @@
 ﻿using IdeoGo.API.Domain.Models;
 using IdeoGo.API.Domain.Repositories;
 using IdeoGo.API.Domain.Services;
+using IdeoGo.API.Domain.Services.Communication;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,11 +12,9 @@ namespace IdeoGo.API.Services
 {
     public class ProfileService : IProfileService
     {
-        private readonly IProfileRespository _profileRespository;
-
-        public ProfileService(IProfileRespository profileRespository)
+        public Task<ProfileResponse> DeleteAsync(int id)
         {
-            _profileRespository = profileRespository;
+            throw new NotImplementedException();
         }
 
         public Task<IEnumerable<Profile>> ListAsync()
@@ -23,14 +22,15 @@ namespace IdeoGo.API.Services
             throw new NotImplementedException();
         }
 
-        //public async Task<IEnumerable<Profile>> ListAsync()
-        //{
-        //    return await _profileRespository.ListAsync();
-        //}
-        //public  async Task<IEnumerable<Profile>> ListAsync()
-        //{
-        //    return await _profileRespository.ListAsync();
-        //}
+        public Task<ProfileResponse> SaveAsync(Profile profile)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ProfileResponse> UpdateAsync(int id, Profile profile)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

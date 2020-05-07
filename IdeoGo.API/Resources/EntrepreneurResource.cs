@@ -7,6 +7,10 @@ namespace IdeoGo.API.Resources
 {
     public class EntrepreneurResource
     {
-        public int Id { get; set; }
+        public int ProfileId { get; set; }
+        public ProfileResource Profile { get; set; }
+
+        public IList<ProjectResource> Projects { get; set; } = new List<ProjectResource>();
+        public IList<TagResource> Publications { get; set; } = new List<TagResource>();
     }
 }

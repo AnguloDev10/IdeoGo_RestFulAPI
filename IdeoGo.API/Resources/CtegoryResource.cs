@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Resources
 {
-    public class CtegoryResource
+    public class CategoryResource
     {
         public int Id { get; set; }
         public string Name { get; set; }
