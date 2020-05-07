@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Domain.Services
 {
-    interface IEntrepreneurService
+    public interface IEntrepreneurService
     {
         Task<IEnumerable<Entrepreneur>> ListAsync();
     }

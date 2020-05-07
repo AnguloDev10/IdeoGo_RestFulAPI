@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Persistences.Contexts
 {
-    public class AppDbContext: DbContext
+    public class AppDbContext : DbContext
     {
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Category> Category { get; set; }
@@ -20,7 +20,8 @@ namespace IdeoGo.API.Persistences.Contexts
         public DbSet<Publication> Publications { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<User> User { get; set; }
-        public AppDbContext(DbContextOptions<AppDbContext>options):base(options) {}
+
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -38,10 +39,10 @@ namespace IdeoGo.API.Persistences.Contexts
                 new Category { Id = 101, Name = "Tecnologia" }
                 );
             builder.Entity<Project>().ToTable("Projects");
-                       builder.Entity<Project>().HasKey(p => p.Id);
-                       builder.Entity<Project>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
-                        builder.Entity<Project>().Property(p => p.Name).IsRequired().HasMaxLength(50);
-                        builder.Entity<Project>().Property(p => p.Description).IsRequired().HasMaxLength(50);
+            builder.Entity<Project>().HasKey(p => p.Id);
+            builder.Entity<Project>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Project>().Property(p => p.Name).IsRequired().HasMaxLength(50);
+            builder.Entity<Project>().Property(p => p.Description).IsRequired().HasMaxLength(50);
             //builder.Entity<Project>().Property(p => p.Entrepreneur).IsRequired();
             //builder.Entity<Project>().HasMany(p => p.Collaborator).WithOne(p => p.Project).HasForeignKey(p => p.ProjectId);
 

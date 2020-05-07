@@ -15,7 +15,8 @@ namespace IdeoGo.API.Domain.Models
         public string Description { get; set; }
 
         //Relationships
-
+        public int UserId { get; set; }
+        public User User { get; set; }
 
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Domain.Services
 {
-    interface IGoalService
+    public interface IGoalService
     {
         Task<IEnumerable<Goal>> ListAsync();
     }

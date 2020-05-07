@@ -12,23 +12,16 @@ namespace IdeoGo.API.Persistence.Repositories
     public class CategoryRepository : BaseRepository, ICategoryRepository
     {
 
-        public CategoryRepository(AppDbContext context) :base(context)
-        {
+        public CategoryRepository(AppDbContext context) : base(context) { }
 
+        public async Task AddAsync(Category category)
+        {
+            await _context.Category.AddAsync(category);
         }
+
         public async Task<IEnumerable<Category>> ListAsync()
         {
             return await _context.Category.ToListAsync();
-        }
-
-        Task ICategoryRepository.AddAsync(Category category)
-        {
-            throw new NotImplementedException();
-        }
-
-        Task<IEnumerable<Category>> ICategoryRepository.ListAsync()
-        {
-            throw new NotImplementedException();
         }
     }
 }

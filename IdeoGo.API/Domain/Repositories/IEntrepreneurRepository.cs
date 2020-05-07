@@ -10,5 +10,7 @@ namespace IdeoGo.API.Domain.Repositories
     {
         Task<IEnumerable<Entrepreneur>> ListAsync();
         Task AddAsync(Entrepreneur entrepreneur);
+        void Update(Entrepreneur entrepreneur);
+        void Remove(Entrepreneur entrepreneur);
     }
 }

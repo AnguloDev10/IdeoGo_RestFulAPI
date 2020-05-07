@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ryzen\\Source\\Repos\\IdeoGo_RestFulAPI2\\IdeoGo.API\\IdeoGo.API.csproj": {}
+    "C:\\Users\\Monke\\source\\repos\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ryzen\\Source\\Repos\\IdeoGo_RestFulAPI2\\IdeoGo.API\\IdeoGo.API.csproj": {
+    "C:\\Users\\Monke\\source\\repos\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ryzen\\Source\\Repos\\IdeoGo_RestFulAPI2\\IdeoGo.API\\IdeoGo.API.csproj",
+        "projectUniqueName": "C:\\Users\\Monke\\source\\repos\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
         "projectName": "IdeoGo.API",
-        "projectPath": "C:\\Users\\Ryzen\\Source\\Repos\\IdeoGo_RestFulAPI2\\IdeoGo.API\\IdeoGo.API.csproj",
-        "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ryzen\\Source\\Repos\\IdeoGo_RestFulAPI2\\IdeoGo.API\\obj\\",
+        "projectPath": "C:\\Users\\Monke\\source\\repos\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
+        "packagesPath": "C:\\Users\\Monke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Monke\\source\\repos\\IdeoGo_RestFulAPI\\IdeoGo.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ryzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Monke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -84,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

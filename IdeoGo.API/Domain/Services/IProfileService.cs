@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Domain.Services
 {
-    interface IProfileService
+    public interface IProfileService
     {
         Task<IEnumerable<Profile>> ListAsync();
     }

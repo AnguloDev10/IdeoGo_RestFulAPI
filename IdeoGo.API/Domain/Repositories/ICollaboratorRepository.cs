@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Domain.Repositories
 {
-    interface ICollaboratorRepository
+    public interface ICollaboratorRepository
     {
-
+            
 
         Task<IEnumerable<Collaborator>> ListAsync();
         Task AddAsync(Collaborator collaborator);

@@ -15,7 +15,6 @@ namespace IdeoGo.API.Domain.Models
         public IList<Project> Projects { get; set; } = new List<Project>();
         public IList<Publication> Publications { get; set; } = new List<Publication>();
         //public IList<Request> Requests { get; set; } = new List<Request>();
-        st>();
 
     
     }
