@@ -8,22 +8,17 @@ namespace IdeoGo.API.Domain.Models
     public class Tag
     {
         public int Id { get; set; }
-        public string Email { get; set; }
-
-        public string Password { get; set; }
 
         public string Name { get; set; }
 
-        public Gender Gender { get; set; }
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
 
-        public string Occupation { get; set; }
+        public IList<Skill> Skills { get; set; } = new List<Skill>();
 
-        public string Experience { get; set; }
-
-        public Account account { get; set; }
-
-        public int accountId { get; set; }
+        public IList<UserProfile> UserProfiles { get; set; } = new List<UserProfile>();
 
         public IList<Project> Projects { get; set; } = new List<Project>();
     }
+
 }

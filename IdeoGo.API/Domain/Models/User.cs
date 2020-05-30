@@ -7,24 +7,22 @@ namespace IdeoGo.API.Domain.Models
 {
     public class User
     {
+
         public int Id { get; set; }
+
         public string Email { get; set; }
 
         public string Password { get; set; }
 
-        public string Name { get; set; }
+        public DateTime DateSignUp { get; set; }
 
-        public Gender Gender { get; set; }
+        public int UserProfileId { get; set; }
+        public UserProfile UserProfile { get; set; }
 
-        public string Occupation { get; set; }
+        public IList<ProjectUser> ProjectUsers { get; set; } = new List<ProjectUser>();
 
-        public string Experience { get; set; }
+        public IList<Application> Applications { get; set; } = new List<Application>();
 
-        public Account account { get; set; }
-
-        public int accountId { get; set; }
-
-        public IList<Project> Projects { get; set; } = new List<Project>();
 
 
     }

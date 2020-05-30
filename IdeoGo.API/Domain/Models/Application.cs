@@ -5,15 +5,22 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Domain.Models
 {
-    public class Goal
+    public class Application
     {
+
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public DateTime EstimatedDate { get; set; }
+
+        public int OrderRequest { get; set; }
+        public string State { get; set; }
+        public DateTime DateSend { get; set; }
+
+        public int UserId { get; set; }
+        public User User { get; set; }
 
         public int ProjectId { get; set; }
         public Project Project { get; set; }
 
+
     }
 }
+
