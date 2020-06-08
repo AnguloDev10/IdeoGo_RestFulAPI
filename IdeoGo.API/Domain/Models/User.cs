@@ -14,14 +14,14 @@ namespace IdeoGo.API.Domain.Models
 
         public string Password { get; set; }
 
-        public DateTime DateSignUp { get; set; }
+        public DateTime Datesignup { get; set; }
 
-        public int UserProfileId { get; set; }
-        public UserProfile UserProfile { get; set; }
+        //public int ProfileId { get; set; }
+        //public Profile Profile { get; set; }
 
-        public IList<ProjectUser> ProjectUsers { get; set; } = new List<ProjectUser>();
+        public IList<ProjectUser> ProjectUsers { get; set; }
 
-        public IList<Application> Applications { get; set; } = new List<Application>();
+        public IList<Application> Applications { get; set; }
 
 
 

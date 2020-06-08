@@ -22,13 +22,18 @@ namespace IdeoGo.API.Domain.Models
         public IList<Requierement> Requierements { get; set; } = new List<Requierement>();
 
 
-        public ProjectSchedule ProjectSchedule { get; set; }
+        //public int TagId { get; set; }
 
-        public int ProjectScheduleId { get; set; }
+        //public Tag Tag { get; set; }
 
-        public List<ProjectTag> ProjectTag { get; set; }
 
-        public List<ProjectUser> ProjectUser { get; set; }
+        //public ProjectSchedule ProjectSchedule { get; set; }
+
+        //public int ProjectScheduleId { get; set; }
+
+        public List<ProjectTag> ProjectTags { get; set; }
+
+        public List<ProjectUser> ProjectUsers { get; set; }
 
     }
 

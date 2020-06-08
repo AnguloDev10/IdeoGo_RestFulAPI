@@ -6,24 +6,14 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Domain.Services.Communication
 {
-    public class CategoryResponse : BaseResponse
+    public class CategoryResponse : BaseResponse<Category>
     {
-        public Category Category { get; private set; }
-
-        public CategoryResponse(bool success, string message, Category category) : base(success, message) ///pasa la llamada a el constructor del padre
+        public CategoryResponse(Category category) : base(category)
         {
-            Category = category;
         }
 
+        public CategoryResponse(string message) : base(message) { }
 
-        public CategoryResponse(Category category) : this(true, string.Empty, category)
-        {
-            //Escenario feliz
-        }
 
-        public CategoryResponse(string message) : this(false, message, null)
-        {
-            ///Escenario triste
-        }
     }
 }

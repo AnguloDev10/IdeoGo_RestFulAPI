@@ -16,9 +16,11 @@ namespace IdeoGo.API.Domain.Models
 
         public IList<Skill> Skills { get; set; } = new List<Skill>();
 
-        public IList<UserProfile> UserProfiles { get; set; } = new List<UserProfile>();
+        public IList<Profile> UserProfiles { get; set; } = new List<Profile>();
 
         public IList<Project> Projects { get; set; } = new List<Project>();
+
+        public List<ProjectTag> ProjectTags { get; set; }
     }
 
 }
