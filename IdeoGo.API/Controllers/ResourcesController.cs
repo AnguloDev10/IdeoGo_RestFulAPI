@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Controllers
 {
+    [Produces("application/json")]
     [Route("/api/[controller]")]
     public class ResourcesController:Controller
     {
