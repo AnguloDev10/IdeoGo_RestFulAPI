@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using IdeoGo.API.Domain.Models;
 using IdeoGo.API.Domain.Services;
+using IdeoGo.API.Extensions;
 using IdeoGo.API.Resources;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -11,60 +12,59 @@ using System.Threading.Tasks;
 namespace IdeoGo.API.Controllers
 {
     [Route("/api/[controller]")]
-    public class TagController : Controller
+    public class CategoryController : Controller
     {
-        private readonly ITagService _tagService;
+        private readonly ICategoryService _categoryService;
         private readonly IMapper _mapper;
 
-        public TagController(ITagService tagService, IMapper mapper)
+        public CategoryController(ICategoryService categoryService, IMapper mapper)
         {
-            _tagService = tagService;
+            _categoryService = categoryService;
             _mapper = mapper;
         }
 
         [HttpGet]
-        public async Task<IEnumerable<TagResource>> GetAllAsync()
+        public async Task<IEnumerable<CategoryResource>> GetAllAsync()
         {
-            var publications = await _tagService.ListAsync();
-            var resources = _mapper.Map<IEnumerable<Tag>, IEnumerable<TagResource>>(publications);
+            var categories = await _categoryService.ListAsync();
+            var resources = _mapper.Map<IEnumerable<Category>, IEnumerable<CategoryResource>>(categories);
             return resources;
         }
 
 
         [HttpPost]
-        public async Task<IActionResult> PostAsync([FromBody] SaveTagResource resource)
+        public async Task<IActionResult> PostAsync([FromBody] SaveCategoryResource resource)
         {
-            // if (!ModelState.IsValid)
-            //     return BadRequest(ModelState.GetErrorMessages());
+           if (!ModelState.IsValid)
+                 return BadRequest(ModelState.GetErrorMessages());
 
-            var tag = _mapper.Map<SaveTagResource, Tag>(resource);
+            var categories = _mapper.Map<SaveCategoryResource, Category>(resource);
 
-            var result = await _tagService.SaveAsync(tag);
+            var result = await _categoryService.SaveAsync(categories);
 
 
 
             if (!result.Success)
                 return BadRequest(result.Message);
 
-            //
 
-            var tagResource = _mapper.Map<Tag, TagResource>(result.Tag);
+            var tagResource = _mapper.Map<Category, CategoryResource>(result.Resource);
 
             return Ok(tagResource);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutAsync(int id, SaveTagResource resource)
+        public async Task<IActionResult> PutAsync(int id, SaveCategoryResource resource)
         {
-            var tag = _mapper.Map<SaveTagResource, Tag>(resource);
-            var result = await _tagService.UpdateAsync(id, tag);
+            var category = _mapper.Map<SaveCategoryResource, Category>(resource);
+            var result = await _categoryService.UpdateAsync(id, category);
 
             if (!result.Success)
             {
                 return BadRequest(result.Message);
             }
 
-            var categoryResource = _mapper.Map<Tag, TagResource>(result.Tag);
+            var categoryResource = _mapper.Map<Category, CategoryResource>(result.Resource);
             return Ok(categoryResource);
         }
 
@@ -72,14 +72,14 @@ namespace IdeoGo.API.Controllers
         public async Task<IActionResult> DeleteAsync(int id)
         {
 
-            var result = await _tagService.DeleteAsync(id);
+            var result = await _categoryService.DeleteAsync(id);
 
             if (!result.Success)
             {
                 return BadRequest(result.Message);
             }
 
-            var tagResource = _mapper.Map<Tag, TagResource>(result.Tag);
+            var tagResource = _mapper.Map<Category, CategoryResource>(result.Resource);
             return Ok(tagResource);
         }
     }

@@ -14,5 +14,7 @@ namespace IdeoGo.API.Domain.Repositories
         void Update(Tag tag);
         void Remove(Tag tag);
         Task<Tag> FindByIDAsync(int id);
+
+        Task<IEnumerable<Tag>> ListByCategoryIdAsync(int categoryId);
     }
 }

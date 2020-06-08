@@ -12,7 +12,19 @@ namespace IdeoGo.API.Mapping
     {
         public ResourceToModelProfile()
         {
-            CreateMap<SaveTagResource, Goal>();
+            CreateMap<SaveCategoryResource        , Category                >();
+            CreateMap<SaveUserResource            , User                      >();
+            CreateMap<SaveProfileResource         , Domain.Models.Profile     >();
+            CreateMap<SaveTagResource             , Tag                     >();
+            CreateMap<SaveRequierementResource    , Requierement             >();
+            CreateMap<SaveResourceResource        , Resource                  >();
+            CreateMap<SaveSkillResource           , Skill                     >();
+            CreateMap<SaveApplicationResource     , Application                   >();
+            CreateMap<SaveProjectResource         , Project                   >();
+            CreateMap<SaveProjectScheduleResource , ProjectSchedule               >();
+            CreateMap<SaveGoalResource            , Goal                      >();
+            CreateMap<SaveActivityResource        , Activity                      >();
+            CreateMap< SaveMTaskResource          ,  MTask                    >();
         }
     }
 }

@@ -1,78 +1,97 @@
-﻿using IdeoGo.API.Domain.Models;
-using IdeoGo.API.Domain.Repositories;
-using IdeoGo.API.Domain.Services.Communication;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IdeoGo.API.Domain.Models;
+using IdeoGo.API.Domain.Repositories;
+using IdeoGo.API.Domain.Services;
+using IdeoGo.API.Domain.Services.Communications;
+using IdeoGo.API.Persistence.Repositories;
 
 namespace IdeoGo.API.Services
 {
     public class ProjectService : IProjectService
     {
         private readonly IProjectRepository _projectRepository;
+        public readonly IUnitOfWork _unitOfWork;
+        public ProjectService(IProjectRepository projectRepository, IUnitOfWork unitOfWork)
+        {
+            _projectRepository = projectRepository;
+            _unitOfWork = unitOfWork;
+        }
+
+
         public async Task<ProjectResponse> DeleteAsync(int id)
         {
-            var existingCategory = await _projectRepository.FindByIDAsync(id);
+            var existingProject = await _projectRepository.FindById(id);
 
-            if (existingCategory == null)
-                return new ProjectResponse("Category not found.");
+            if (existingProject == null)
+                return new ProjectResponse("Project not found");
 
             try
             {
-                _projectRepository.Remove(existingCategory);
+                _projectRepository.Remove(existingProject);
+                await _unitOfWork.CompleteAsync();
 
-                return new ProjectResponse(existingCategory);
-
+                return new ProjectResponse(existingProject);
             }
             catch (Exception ex)
             {
-                return new ProjectResponse($"An error ocurred while deleting the category : {ex.Message}");
+                return new ProjectResponse($"An error ocurred while deleting guardian: {ex.Message}");
             }
         }
 
-        public async Task<IEnumerable<Project>> ListAsync()
+        public async Task<ProjectResponse> GetByIdAsync(int id)
+        {
+            var existingProject = await _projectRepository.FindById(id);
+
+            if (existingProject == null)
+                return new ProjectResponse("Project not found");
+            return new ProjectResponse(existingProject);
+        }
+
+        public  async Task<IEnumerable<Project>> ListAsync()
         {
             return await _projectRepository.ListAsync();
         }
 
         public async Task<ProjectResponse> SaveAsync(Project project)
         {
-
             try
             {
                 await _projectRepository.AddAsync(project);
+                await _unitOfWork.CompleteAsync();
 
                 return new ProjectResponse(project);
             }
             catch (Exception ex)
             {
-
-                return new ProjectResponse($"An error ocurred while saving the category : {ex.Message}");
+                return new ProjectResponse($"An error ocurred while saving the guardian: {ex.Message}");
             }
-            throw new NotImplementedException();
         }
 
         public async Task<ProjectResponse> UpdateAsync(int id, Project project)
         {
-            var existingCategory = await _projectRepository.FindByIDAsync(id);
+             var existingProject = await _projectRepository.FindById(id);
 
-            if (existingCategory == null)
-                return new ProjectResponse("Category not found.");
-            existingCategory.Name = project.Name;
-            existingCategory.Description = project.Description;
+            if (existingProject == null)
+                return new ProjectResponse("Project not found");
+
+            existingProject.Name = project.Name;
+            existingProject.Description = project.Description;
+            existingProject.DateCreated = project.DateCreated;
+
             try
             {
-                _projectRepository.Update(existingCategory);
+                _projectRepository.Update(existingProject);
+                await _unitOfWork.CompleteAsync();
 
-                return new ProjectResponse(existingCategory);
+                return new ProjectResponse(existingProject);
             }
             catch (Exception ex)
             {
-                return new ProjectResponse($"An error ocurred while updating the category : {ex.Message}");
+                return new ProjectResponse($"An error ocurred while updating guardian: {ex.Message}");
             }
-
-            throw new NotImplementedException();
         }
     }
 }

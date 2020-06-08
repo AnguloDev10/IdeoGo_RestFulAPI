@@ -12,29 +12,32 @@ namespace IdeoGo.API.Services
     public class GoalService : IGoalService
     {
         private readonly IGoalRepository _goalRepository;
+        public readonly IUnitOfWork _unitOfWork;
 
-        public GoalService(IGoalRepository goalRepository)
+        public GoalService(IGoalRepository goalRepository, IUnitOfWork unitOfWork)
         {
             _goalRepository = goalRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<GoalResponse> DeleteAsync(int id)
         {
-            var existingCategory = await _goalRepository.FindByIDAsync(id);
+            var existingGoal = await _goalRepository.FindByIDAsync(id);
 
-            if (existingCategory == null)
-                return new GoalResponse("Category not found.");
+            if (existingGoal == null)
+                return new GoalResponse("Goal not found.");
 
             try
             {
-                _goalRepository.Remove(existingCategory);
+                _goalRepository.Remove(existingGoal);
+                await _unitOfWork.CompleteAsync();
 
-                return new GoalResponse(existingCategory);
+                return new GoalResponse(existingGoal);
 
             }
             catch (Exception ex)
             {
-                return new GoalResponse($"An error ocurred while deleting the category : {ex.Message}");
+                return new GoalResponse($"An error ocurred while deleting the Goal : {ex.Message}");
             }
         }
 
@@ -48,34 +51,36 @@ namespace IdeoGo.API.Services
             try
             {
                 await _goalRepository.AddAsync(goal);
+                await _unitOfWork.CompleteAsync();
 
                 return new GoalResponse(goal);
             }
             catch (Exception ex)
             {
 
-                return new GoalResponse($"An error ocurred while saving the category : {ex.Message}");
+                return new GoalResponse($"An error ocurred while saving the Goal : {ex.Message}");
             }
             throw new NotImplementedException();
         }
 
         public async Task<GoalResponse> UpdateAsync(int id, Goal goal)
         {
-            var existingCategory = await _goalRepository.FindByIDAsync(id);
+            var existingGoal  = await _goalRepository.FindByIDAsync(id);
 
-            if (existingCategory == null)
-                return new GoalResponse("Category not found.");
-            existingCategory.Name = goal.Name;
-            existingCategory.Description = goal.Description;
+            if (existingGoal == null)
+                return new GoalResponse("goal not found.");
+            existingGoal.Name = goal.Name;
+            existingGoal.Description = goal.Description;
             try
             {
-                _goalRepository.Update(existingCategory);
+                _goalRepository.Update(existingGoal);
+                await _unitOfWork.CompleteAsync();
 
-                return new GoalResponse(existingCategory);
+                return new GoalResponse(existingGoal);
             }
             catch (Exception ex)
             {
-                return new GoalResponse($"An error ocurred while updating the category : {ex.Message}");
+                return new GoalResponse($"An error ocurred while updating the goal : {ex.Message}");
             }
 
             throw new NotImplementedException();

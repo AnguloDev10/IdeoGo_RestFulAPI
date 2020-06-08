@@ -1,6 +1,6 @@
 ﻿using IdeoGo.API.Domain.Models;
 using IdeoGo.API.Domain.Repositories;
-using IdeoGo.API.Persistences.Contexts;
+using IdeoGo.API.Domain.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ namespace IdeoGo.API.Persistence.Repositories
 {
     public class TagRepository : BaseRepository, ITagRepository
     {
-        TagRepository(AppDbContext context) : base(context) { }
+        public TagRepository(AppDbContext context) : base(context) { }
 
         public async Task AddAsync(Tag tag)
         {
@@ -37,5 +37,11 @@ namespace IdeoGo.API.Persistence.Repositories
         {
             _context.Tags.Update(tag);
         }
+
+        public async Task<IEnumerable<Tag>> ListByCategoryIdAsync(int categoryId) => ////lambda
+            await _context.Tags
+            .Where(p => p.CategoryId == categoryId)
+            .Include(p => p.Category)
+            .ToListAsync();
     }
 }

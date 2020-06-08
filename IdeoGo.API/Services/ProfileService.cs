@@ -12,24 +12,78 @@ namespace IdeoGo.API.Services
 {
     public class ProfileService : IProfileService
     {
-        public Task<ProfileResponse> DeleteAsync(int id)
+        private readonly IProfileRepository _profileRepository;
+        public readonly IUnitOfWork _unitOfWork;
+
+        public ProfileService(IProfileRepository profileRepository, IUnitOfWork unitOfWork)
         {
-            throw new NotImplementedException();
+            _profileRepository = profileRepository;
+            _unitOfWork = unitOfWork;
+        }
+        public async Task<ProfileResponse> DeleteAsync(int id)
+        {
+            var existingProfile = await _profileRepository.FindById(id);
+
+            if (existingProfile == null)
+                return new ProfileResponse("Profile not found");
+
+            try
+            {
+                _profileRepository.Remove(existingProfile);
+                await _unitOfWork.CompleteAsync();
+
+                return new ProfileResponse(existingProfile);
+            }
+            catch (Exception ex)
+            {
+                return new ProfileResponse($"An error ocurred while deleting profile: {ex.Message}");
+            }
         }
 
-        public Task<IEnumerable<Profile>> ListAsync()
+        public async Task<IEnumerable<Profile>> ListAsync()
         {
-            throw new NotImplementedException();
+            return await _profileRepository.ListAsync();
         }
 
-        public Task<ProfileResponse> SaveAsync(Profile profile)
+        public async Task<ProfileResponse> SaveAsync(Profile profile)
         {
-            throw new NotImplementedException();
+            try
+            {
+                await _profileRepository.AddAsync(profile);
+                await _unitOfWork.CompleteAsync();
+
+                return new ProfileResponse(profile);
+            }
+            catch (Exception ex)
+            {
+                return new ProfileResponse($"An error ocurred while saving the profile: {ex.Message}");
+            }
         }
 
-        public Task<ProfileResponse> UpdateAsync(int id, Profile profile)
+        public async Task<ProfileResponse> UpdateAsync(int id, Profile profile)
         {
-            throw new NotImplementedException();
+            var existingProfile = await _profileRepository.FindById(id);
+
+            if (existingProfile == null)
+                return new ProfileResponse("Profile not found");
+
+            existingProfile.Name = profile.Name;
+            existingProfile.Gender = profile.Gender;
+            existingProfile.Age = profile.Age;
+            existingProfile.Occupation = profile.Occupation;
+            existingProfile.TypeUser = profile.TypeUser;
+
+            try
+            {
+                _profileRepository.Update(existingProfile);
+                await _unitOfWork.CompleteAsync();
+
+                return new ProfileResponse(existingProfile);
+            }
+            catch (Exception ex)
+            {
+                return new ProfileResponse($"An error ocurred while updating profile: {ex.Message}");
+            }
         }
     }
 }

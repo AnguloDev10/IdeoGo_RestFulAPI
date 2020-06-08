@@ -6,24 +6,12 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Domain.Services.Communication
 {
-    public class ProfileResponse : BaseResponse
+    public class ProfileResponse : BaseResponse<Profile>
     {
-        public Profile Profile { get; private set; }
-
-        public ProfileResponse(bool success, string message, Profile profile) : base(success, message) ///pasa la llamada a el constructor del padre
+        public ProfileResponse(Profile profile) : base(profile)
         {
-            Profile = profile;
         }
 
-
-        public ProfileResponse(Profile profile) : this(true, string.Empty, profile)
-        {
-            //Escenario feliz
-        }
-
-        public ProfileResponse(string message) : this(false, message, null)
-        {
-            ///Escenario triste
-        }
+        public ProfileResponse(string message) : base(message) { }
     }
 }

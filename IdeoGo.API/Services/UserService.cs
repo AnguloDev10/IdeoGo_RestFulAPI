@@ -12,18 +12,27 @@ namespace IdeoGo.API.Services
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly IUnitOfWork _unitOfWork;
+
+
+        public UserService(IUserRepository userRepository, IUnitOfWork unitOfWork)
+        {
+            _userRepository = userRepository;
+            _unitOfWork = unitOfWork;
+        }
+
         public async Task<UserResponse> DeleteAsync(int id)
         {
-            var existingCategory = await _userRepository.FindByIDAsync(id);
+            var existingUser = await _userRepository.FindById(id);
 
-            if (existingCategory == null)
-                return new UserResponse("Category not found.");
+            if (existingUser == null)
+                return new UserResponse("User not found.");
 
             try
             {
-                _userRepository.Remove(existingCategory);
+                _userRepository.Remove(existingUser);
 
-                return new UserResponse(existingCategory);
+                return new UserResponse(existingUser);
 
             }
             catch (Exception ex)
@@ -48,27 +57,30 @@ namespace IdeoGo.API.Services
             catch (Exception ex)
             {
 
-                return new UserResponse($"An error ocurred while saving the category : {ex.Message}");
+                return new UserResponse($"An error ocurred while saving the user : {ex.Message}");
             }
             throw new NotImplementedException();
         }
 
         public async Task<UserResponse> UpdateAsync(int id, User user)
         {
-            var existingCategory = await _userRepository.FindByIDAsync(id);
+            var existingUser = await _userRepository.FindById(id);
 
-            if (existingCategory == null)
-                return new UserResponse("Category not found.");
-            existingCategory.Name = user.Name;
+            if (existingUser == null)
+                return new UserResponse("User not found.");
+            
+            existingUser.Email = user.Email;
+            existingUser.Datesignup = user.Datesignup;
+            existingUser.Password = user.Password;
             try
             {
-                _userRepository.Update(existingCategory);
+                _userRepository.Update(existingUser);
 
-                return new UserResponse(existingCategory);
+                return new UserResponse(existingUser);
             }
             catch (Exception ex)
             {
-                return new UserResponse($"An error ocurred while updating the category : {ex.Message}");
+                return new UserResponse($"An error ocurred while updating the user : {ex.Message}");
             }
 
             throw new NotImplementedException();

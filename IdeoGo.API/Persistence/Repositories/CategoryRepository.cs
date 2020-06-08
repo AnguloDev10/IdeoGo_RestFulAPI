@@ -1,5 +1,5 @@
 ﻿using IdeoGo.API.Domain.Models;
-using IdeoGo.API.Persistences.Contexts;
+using IdeoGo.API.Domain.Persistence.Contexts;
 using IdeoGo.API.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -16,38 +16,29 @@ namespace IdeoGo.API.Persistence.Repositories
 
         public async Task AddAsync(Category category)
         {
-            await _context.Category.AddAsync(category);
+            await _context.Categories.AddAsync(category);
         }
 
 
         public async Task<Category> FindByIDAsync(int id)
         {
-            return await _context.Category.FindAsync(id);
+            return await _context.Categories.FindAsync(id);
         }
 
         public async Task<IEnumerable<Category>> ListAsync()
         {
-            return await _context.Category.ToListAsync();
+            return await _context.Categories.ToListAsync();
         }
 
         public void Remove(Category category)
         {
-            _context.Category.Remove(category);
+            _context.Categories.Remove(category);
         }
 
         public void Update(Category category)
         {
-            _context.Category.Update(category);
+            _context.Categories.Update(category);
         }
 
-        public void Update(Task<Category> existingCategory)
-        {
-            throw new NotImplementedException();
-        }
-
-        Task<IEnumerable<Category>> ICategoryRepository.ListAsync()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IdeoGo.API.Domain.Services.Communication;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,6 +12,8 @@ namespace IdeoGo.API.Resources
 
         public string Name { get; set; }
 
-        public IList<ProjectResource> Projects { get; set; } = new List<ProjectResource>();
+        public CategoryResponse Category { get; set; }
+
+
     }
 }

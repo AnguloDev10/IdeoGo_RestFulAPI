@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Domain.Repositories
 {
-    interface IUserRepository
+    public interface IUserRepository
     {
         Task<IEnumerable<User>> ListAsync();
         Task AddAsync(User user);
-
+        Task<User> FindById(int id);
         void Update(User user);
         void Remove(User user);
-        Task<User> FindByIDAsync(int id);
     }
 }
 

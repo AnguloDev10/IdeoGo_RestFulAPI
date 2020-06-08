@@ -8,15 +8,28 @@ namespace IdeoGo.API.Domain.Models
     public class Profile
     {
         public int Id { get; set; }
-        public string FullName { get; set; }
-        public string Field { get; set; }
-        public string University { get; set; }
-        public string Degree { get; set; }
-        public string Description { get; set; }
 
-        //Relationships
-        public int UserId { get; set; }
+        public string Name { get; set; }
+
+        public EGender Gender { get; set; }
+
+        public string Occupation { get; set; }
+
+        public int Age { get; set; }
+
+        public string TypeUser { get; set; }
+
         public User User { get; set; }
 
+        public int UserId { get; set; }
+
+
+        public IList<Skill> Skills { get; set; } = new List<Skill>();
+
+        public int TagId { get; set; }
+        public Tag Tag { get; set; }
     }
+
+
 }
+
