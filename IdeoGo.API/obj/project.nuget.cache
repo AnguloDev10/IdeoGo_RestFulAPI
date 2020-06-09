@@ -1,13 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Nbu7fF1220+8yXo+pDhaN9t/QQitFIURaUUuQyBxWhJWrdzJalN1p+v4BsmBCmxq2SFGq5kwgffRjmLftNXp2Q==",
+  "dgSpecHash": "2c8CA0H946U/9cdIbaazOjZ5EuVVQqi5vk1r37kPDxy/YcNQhmCQNotf65gAlLeSt0UWWv+J+Dj8OVtnRaeoBA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\NIvra\\Projects\\apiWeb\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
+  "projectFilePath": "C:\\Users\\NIvra\\Projects\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\NIvra\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\NIvra\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\NIvra\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
-    "C:\\Users\\NIvra\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",
     "C:\\Users\\NIvra\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",
     "C:\\Users\\NIvra\\.nuget\\packages\\k4os.compression.lz4\\1.1.11\\k4os.compression.lz4.1.1.11.nupkg.sha512",
     "C:\\Users\\NIvra\\.nuget\\packages\\k4os.compression.lz4.streams\\1.1.11\\k4os.compression.lz4.streams.1.1.11.nupkg.sha512",

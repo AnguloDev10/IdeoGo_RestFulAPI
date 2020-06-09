@@ -42,18 +42,6 @@
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
         }
       },
-      "FluentAssertions/5.10.3": {
-        "type": "package",
-        "dependencies": {
-          "System.Configuration.ConfigurationManager": "4.4.0"
-        },
-        "compile": {
-          "lib/netcoreapp2.1/FluentAssertions.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp2.1/FluentAssertions.dll": {}
-        }
-      },
       "Google.Protobuf/3.6.1": {
         "type": "package",
         "dependencies": {
@@ -2041,42 +2029,6 @@
         "lib/netstandard2.0/BouncyCastle.Crypto.xml",
         "lib/xamarinios/BouncyCastle.Crypto.dll",
         "lib/xamarinios/BouncyCastle.Crypto.xml"
-      ]
-    },
-    "FluentAssertions/5.10.3": {
-      "sha512": "gVPEVp1hLVqcv+7Q2wiDf7kqCNn7+bQcQ0jbJ2mcRT6CeRoZl1tNkqvzSIhvekyldDptk77j1b03MXTTRIqqpg==",
-      "type": "package",
-      "path": "fluentassertions/5.10.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "FluentAssertions.png",
-        "fluentassertions.5.10.3.nupkg.sha512",
-        "fluentassertions.nuspec",
-        "lib/net45/FluentAssertions.dll",
-        "lib/net45/FluentAssertions.pdb",
-        "lib/net45/FluentAssertions.xml",
-        "lib/net47/FluentAssertions.dll",
-        "lib/net47/FluentAssertions.pdb",
-        "lib/net47/FluentAssertions.xml",
-        "lib/netcoreapp2.0/FluentAssertions.dll",
-        "lib/netcoreapp2.0/FluentAssertions.pdb",
-        "lib/netcoreapp2.0/FluentAssertions.xml",
-        "lib/netcoreapp2.1/FluentAssertions.dll",
-        "lib/netcoreapp2.1/FluentAssertions.pdb",
-        "lib/netcoreapp2.1/FluentAssertions.xml",
-        "lib/netstandard1.3/FluentAssertions.dll",
-        "lib/netstandard1.3/FluentAssertions.pdb",
-        "lib/netstandard1.3/FluentAssertions.xml",
-        "lib/netstandard1.6/FluentAssertions.dll",
-        "lib/netstandard1.6/FluentAssertions.pdb",
-        "lib/netstandard1.6/FluentAssertions.xml",
-        "lib/netstandard2.0/FluentAssertions.dll",
-        "lib/netstandard2.0/FluentAssertions.pdb",
-        "lib/netstandard2.0/FluentAssertions.xml",
-        "lib/netstandard2.1/FluentAssertions.dll",
-        "lib/netstandard2.1/FluentAssertions.pdb",
-        "lib/netstandard2.1/FluentAssertions.xml"
       ]
     },
     "Google.Protobuf/3.6.1": {
@@ -6684,7 +6636,6 @@
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper >= 9.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 7.0.0",
-      "FluentAssertions >= 5.10.3",
       "Microsoft.EntityFrameworkCore >= 3.1.4",
       "Microsoft.EntityFrameworkCore.InMemory >= 3.1.4",
       "Microsoft.EntityFrameworkCore.Relational >= 3.1.4",
@@ -6701,11 +6652,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NIvra\\Projects\\apiWeb\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
+      "projectUniqueName": "C:\\Users\\NIvra\\Projects\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
       "projectName": "IdeoGo.API",
-      "projectPath": "C:\\Users\\NIvra\\Projects\\apiWeb\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
+      "projectPath": "C:\\Users\\NIvra\\Projects\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
       "packagesPath": "C:\\Users\\NIvra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NIvra\\Projects\\apiWeb\\IdeoGo_RestFulAPI\\IdeoGo.API\\obj\\",
+      "outputPath": "C:\\Users\\NIvra\\Projects\\IdeoGo_RestFulAPI\\IdeoGo.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\NIvra\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6739,10 +6690,6 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[7.0.0, )"
-          },
-          "FluentAssertions": {
-            "target": "Package",
-            "version": "[5.10.3, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",

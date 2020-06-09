@@ -10,7 +10,6 @@ using IdeoGo.API.Resources;
 
 namespace IdeoGo.API.Controllers
 {
-    [Produces("application/json")]
     [Route("/api/[controller]")]
     public class ProjectUserController: Controller
     {
