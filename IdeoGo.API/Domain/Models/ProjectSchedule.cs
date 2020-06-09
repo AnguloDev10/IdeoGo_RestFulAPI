@@ -24,7 +24,7 @@ namespace IdeoGo.API.Domain.Models
         public int ProjectId { get; set; }
         public Project Project { get; set; }
 
-        public IList<MTask> Tasks { get; set; } = new List<MTask>();
+        public IList<MTask> MTasks { get; set; } = new List<MTask>();
 
         public IList<Activity> Activities { get; set; } = new List<Activity>();
 
