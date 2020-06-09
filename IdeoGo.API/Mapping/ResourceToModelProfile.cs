@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Profile = IdeoGo.API.Domain.Models.Profile;
 
 namespace IdeoGo.API.Mapping
 {
@@ -14,7 +15,7 @@ namespace IdeoGo.API.Mapping
         {
             CreateMap<SaveCategoryResource        , Category                >();
             CreateMap<SaveUserResource            , User                      >();
-            CreateMap<SaveProfileResource         , Domain.Models.Profile     >();
+            CreateMap<SaveProfileResource         , Profile                 >();
             CreateMap<SaveTagResource             , Tag                     >();
             CreateMap<SaveRequierementResource    , Requierement             >();
             CreateMap<SaveResourceResource        , Resource                  >();

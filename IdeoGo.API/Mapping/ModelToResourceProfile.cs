@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Profile = IdeoGo.API.Domain.Models.Profile;
 
 namespace IdeoGo.API.Mapping
 {
@@ -15,8 +16,8 @@ namespace IdeoGo.API.Mapping
         {
             CreateMap<Category, CategoryResource>();
             CreateMap<User, UserResource>();
-            CreateMap<Domain.Models.Profile, ProfileResource>();
-            CreateMap<Domain.Models.Profile, ProfileResource>()
+            CreateMap<Profile, ProfileResource>();
+            CreateMap<Profile, ProfileResource>()
                .ForMember(src => src.Gender,
                opt => opt.MapFrom(src => src.Gender.ToDescriptionString()));
 
