@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\NIvra\\Projects\\apiWeb\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj": {}
+    "C:\\Users\\NIvra\\Projects\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\NIvra\\Projects\\apiWeb\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj": {
+    "C:\\Users\\NIvra\\Projects\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\NIvra\\Projects\\apiWeb\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
+        "projectUniqueName": "C:\\Users\\NIvra\\Projects\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
         "projectName": "IdeoGo.API",
-        "projectPath": "C:\\Users\\NIvra\\Projects\\apiWeb\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
+        "projectPath": "C:\\Users\\NIvra\\Projects\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
         "packagesPath": "C:\\Users\\NIvra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\NIvra\\Projects\\apiWeb\\IdeoGo_RestFulAPI\\IdeoGo.API\\obj\\",
+        "outputPath": "C:\\Users\\NIvra\\Projects\\IdeoGo_RestFulAPI\\IdeoGo.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\NIvra\\AppData\\Roaming\\NuGet\\NuGet.Config",
