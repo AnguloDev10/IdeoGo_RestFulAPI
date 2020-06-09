@@ -20,8 +20,14 @@ namespace IdeoGo.API.Domain.Models
         [Required]
         public DateTime Datesignup { get; set; }
 
-        //public int ProfileId { get; set; }
-        //public Profile Profile { get; set; }
+        [Required]
+        public int ProfileId { get; set; }
+        public Profile Profile { get; set; }
+
+        [Required]
+        [Column("project_id")]
+        public int ProjectId { get; set; }
+        public Project Project { get; set; }
 
         public IList<ProjectUser> ProjectUsers { get; set; }
 

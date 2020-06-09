@@ -12,23 +12,27 @@ namespace IdeoGo.API.Domain.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+
         [Required]
         public string Name { get; set; }
-        
         public EGender Gender { get; set; }
+
         [Required]
         public string Occupation { get; set; }
+        
         [Required]
         public int Age { get; set; }
+        
         [Required]
         [Column("type_user")]
         public string TypeUser { get; set; }
+        
         [Required]
         public User User { get; set; }
+        
         [Required]
         [Column("user_id")]
         public int UserId { get; set; }
-
 
         public IList<Skill> Skills { get; set; } = new List<Skill>();
 
