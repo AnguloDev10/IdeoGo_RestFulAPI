@@ -18,7 +18,7 @@ namespace IdeoGo.API.Domain.Models
         [Required]
         public string Password { get; set; }
         [Required]
-        [Column("date_sing")]
+        //[Column("date_sing")]
         public DateTime Datesignup { get; set; }
 
         //[Required]

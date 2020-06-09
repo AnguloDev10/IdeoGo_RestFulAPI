@@ -51,6 +51,7 @@ namespace IdeoGo.API.Services
             try
             {
                 await _userRepository.AddAsync(user);
+                await _unitOfWork.CompleteAsync();
 
                 return new UserResponse(user);
             }
