@@ -16,8 +16,5 @@ namespace IdeoGo.API.Domain.Models
         public string Name { get; set; }
 
         public IList<Tag> Tags { get; set; } = new List<Tag>();
-
-
-
     }
 }
