@@ -12,18 +12,18 @@ namespace IdeoGo.API.Domain.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        
         [Required]
         public string Name { get; set; }
+        
         [Required]
+        [Column("category_id")]
         public int CategoryId { get; set; }
         public Category Category { get; set; }
 
         public IList<Skill> Skills { get; set; } = new List<Skill>();
-
         public IList<Profile> UserProfiles { get; set; } = new List<Profile>();
-
         public IList<Project> Projects { get; set; } = new List<Project>();
-
         public List<ProjectTag> ProjectTags { get; set; }
     }
 

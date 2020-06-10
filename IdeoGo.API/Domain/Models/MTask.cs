@@ -18,8 +18,14 @@ namespace IdeoGo.API.Domain.Models
         public string Description { get; set; }
         [Required]
         public DateTime DeliveryDate { get; set; }
+
         [Column("projectschedule_Id")]
         public int ProjectScheduleId { get; set; }
         public ProjectSchedule ProjectSchedule { get; set; }
+
+ 
+        [Column("project_Id")]
+        public int ProjectId { get; set; }
+        public Project Project { get; set; }
     }
 }

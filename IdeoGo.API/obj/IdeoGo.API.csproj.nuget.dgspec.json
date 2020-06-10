@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ryzen\\Downloads\\IdeoGo.API\\IdeoGo.API\\IdeoGo.API.csproj": {}
+    "C:\\Users\\Ryzen\\Downloads\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\IdeoGo.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ryzen\\Downloads\\IdeoGo.API\\IdeoGo.API\\IdeoGo.API.csproj": {
+    "C:\\Users\\Ryzen\\Downloads\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\IdeoGo.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ryzen\\Downloads\\IdeoGo.API\\IdeoGo.API\\IdeoGo.API.csproj",
+        "projectUniqueName": "C:\\Users\\Ryzen\\Downloads\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\IdeoGo.API.csproj",
         "projectName": "IdeoGo.API",
-        "projectPath": "C:\\Users\\Ryzen\\Downloads\\IdeoGo.API\\IdeoGo.API\\IdeoGo.API.csproj",
+        "projectPath": "C:\\Users\\Ryzen\\Downloads\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\IdeoGo.API.csproj",
         "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ryzen\\Downloads\\IdeoGo.API\\IdeoGo.API\\obj\\",
+        "outputPath": "C:\\Users\\Ryzen\\Downloads\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

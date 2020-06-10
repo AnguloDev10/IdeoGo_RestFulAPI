@@ -90,31 +90,26 @@ namespace IdeoGo.API
 
 
             services.AddSwaggerGen(c => {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "IdeoGoApi", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo {
+                    Title = "IdeoGoApi",
+                    Version = "v1",
+                    Description = "The best API of the SW52 ASP.NET Core Web API",
+                    TermsOfService = new Uri("https://example.com/terms"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Shayne Boyer",
+                        Email = string.Empty,
+                        Url = new Uri("https://www.gmail.com/wmavalle"),
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "Use under LICX",
+                        Url = new Uri("https://example.com/license"),
+                    }
+                });
             });
 
-            //services.AddSwaggerGen(c =>
-            //{
-            //    c.SwaggerDoc("v1", new OpenApiInfo
-            //    {
-            //        Version = "v1",
-            //        Title = "ToDo API",
-            //        Description = "A simple example ASP.NET Core Web API",
-            //        TermsOfService = new Uri("https://example.com/terms"),
-            //        Contact = new OpenApiContact
-            //        {
-            //            Name = "Shayne Boyer",
-            //            Email = string.Empty,
-            //            Url = new Uri("https://www.gmail.com/wmavalle"),
-            //        },
-            //        License = new OpenApiLicense
-            //        {
-            //            Name = "Use under LICX",
-            //            Url = new Uri("https://example.com/license"),
-            //        }
-            //    });
-            //});
-
+            
 
 
             /////////////////
