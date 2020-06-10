@@ -8,10 +8,7 @@ namespace IdeoGo.API.Resources
 {
     public class SaveCategoryResource
     {
-        /// <summary>
-        /// TODO ESTO ES EL BACKEND Y LA PARTE DEL USUARIO ES FRONTEND
-        /// 
-        /// </summary>
+
         [Required]
         [MaxLength(30)]
         public string Name { get; set; }

@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 
 namespace IdeoGo.API.Controllers
 {
+    [Produces("application/json")]
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase

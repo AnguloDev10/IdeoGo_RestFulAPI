@@ -1,27 +1,42 @@
 ﻿using IdeoGo.API.Domain.Models;
+using IdeoGo.API.Domain.Persistence.Contexts;
 using IdeoGo.API.Domain.Repositories;
-using IdeoGo.API.Persistences.Contexts;
+
 using Microsoft.EntityFrameworkCore;
 using System;
-using AutoMapper;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace IdeoGo.API.Persistence.Repositories
 {
-    public class ProfileRepository : BaseRepository, IProfileRespository
+    public class ProfileRepository : BaseRepository, IProfileRepository
     {
-        ProfileRepository(AppDbContext context) : base(context) { }
+        public ProfileRepository(AppDbContext context) : base(context) { }
 
-        public Task AddAsync(AutoMapper.Profile profile)
+        public async Task AddAsync(Profile profile)
         {
-            throw new NotImplementedException();
+            await _context.Profiles.AddAsync(profile);
         }
 
-        public Task<IEnumerable<AutoMapper.Profile>> ListAsync()
+        public async Task<Profile> FindById(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Profiles.FindAsync(id);
+        }
+
+        public async Task<IEnumerable<Profile>> ListAsync()
+        {
+            return await _context.Profiles.ToListAsync();
+        }
+
+        public void Remove(Profile profile)
+        {
+            _context.Profiles.FindAsync(profile);
+        }
+
+        public void Update(Profile profile)
+        {
+            _context.Profiles.Update(profile);
         }
     }
 }

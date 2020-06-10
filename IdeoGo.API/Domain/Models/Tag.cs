@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,23 +9,22 @@ namespace IdeoGo.API.Domain.Models
 {
     public class Tag
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string Email { get; set; }
-
-        public string Password { get; set; }
-
+        
+        [Required]
         public string Name { get; set; }
+        
+        [Required]
+        [Column("category_id")]
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
 
-        public Gender Gender { get; set; }
-
-        public string Occupation { get; set; }
-
-        public string Experience { get; set; }
-
-        public Account account { get; set; }
-
-        public int accountId { get; set; }
-
+        public IList<Skill> Skills { get; set; } = new List<Skill>();
+        public IList<Profile> UserProfiles { get; set; } = new List<Profile>();
         public IList<Project> Projects { get; set; } = new List<Project>();
+        public List<ProjectTag> ProjectTags { get; set; }
     }
+
 }
