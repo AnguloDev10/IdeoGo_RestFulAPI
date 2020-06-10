@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IdeoGo.API</name>
+    </assembly>
+    <members>
+        <!-- Badly formed XML comment ignored for member "M:IdeoGo.API.Controllers.ProjectTagController.AssignProjectTag(System.Int32,System.Int32)" -->
+    </members>
+</doc>

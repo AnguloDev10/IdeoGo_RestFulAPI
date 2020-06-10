@@ -8,12 +8,17 @@ namespace IdeoGo.API.Resources
 {
     public class SaveProjectResource
     {
+
         [Required]
         [MaxLength(30)]
         public string Name { get; set; }
 
-
-        [MaxLength(150)]
+        [Required]
+        [MaxLength(250)]
         public string Description { get; set; }
+
+
+        [Required]
+        public DateTime DateCreated { get; set; }
     }
 }

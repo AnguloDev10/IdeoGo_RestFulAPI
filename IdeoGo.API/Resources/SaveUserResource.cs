@@ -17,18 +17,8 @@ namespace IdeoGo.API.Resources
         public string Password { get; set; }
 
         [Required]
-        [MaxLength(20)]
-        public string Name { get; set; }
+        public DateTime DateSignUp { get; set; }
 
-        [Required]
-        public Gender Gender { get; set; }
 
-        [Required]
-        [MaxLength(80)]
-        public string Occupation { get; set; }
-
-        [Required]
-        [MaxLength(100)]
-        public string Experience { get; set; }
     }
 }

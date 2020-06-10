@@ -9,7 +9,7 @@ namespace IdeoGo.API.Resources
     public class SaveTagResource
     {
         [Required]
-        [MaxLength(30)]
+        [MaxLength(50)]
         public string Name { get; set; }
     }
 }

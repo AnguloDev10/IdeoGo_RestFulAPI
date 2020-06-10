@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using IdeoGo.API.Domain.Models;
+using IdeoGo.API.Extensions;
 using IdeoGo.API.Resources;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,32 @@ namespace IdeoGo.API.Mapping
     {
         public ModelToResourceProfile()
         {
-            CreateMap<Collaborator, GoalResource>();
+            CreateMap<Category, CategoryResource>();
+            CreateMap<User, UserResource>();
+            CreateMap<Domain.Models.Profile, ProfileResource>();
+            CreateMap<Domain.Models.Profile, ProfileResource>()
+               .ForMember(src => src.Gender,
+               opt => opt.MapFrom(src => src.Gender.ToDescriptionString()));
+
+            CreateMap<Tag, TagResource>();
+
+
+            CreateMap<Requierement, RequierementResource>();
+            CreateMap<Resource, ResourceResource>();
+            CreateMap<Resource, ResourceResource>()
+                .ForMember(src => src.UnitOfMeasurement,
+                opt => opt.MapFrom(src => src.UnitOfMeasurement.ToDescriptionString()));
+            
+            CreateMap<Skill, SkillResource>();
+            CreateMap<Application, ApplicationResource>();
+
+            CreateMap<Project, ProjectResource>();
+
+
+            CreateMap<ProjectSchedule, ProjectScheduleResource>();
+            CreateMap<Goal, GoalResource>();
+            CreateMap<Activity, ActivityResource>();
+            CreateMap<MTask, MTaskResource > ();
         }
     }
 }

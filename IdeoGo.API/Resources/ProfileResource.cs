@@ -8,14 +8,19 @@ namespace IdeoGo.API.Resources
     public class ProfileResource
     {
         public int Id { get; set; }
-        public string FullName { get; set; }
-        public string Field { get; set; }
-        public string University { get; set; }
-        public string Degree { get; set; }
-        public string Description { get; set; }
 
-        //Relationships
-        public int UserId { get; set; }
+        public string Name { get; set; }
+
+        public EGender Gender { get; set; }
+
+        public string Occupation { get; set; }
+
+        public int Age { get; set; }
+
+        public string TypeUser { get; set; }
+
         public UserResource User { get; set; }
+
+        public TagResource Tag { get; set; }
     }
 }

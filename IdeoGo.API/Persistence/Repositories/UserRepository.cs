@@ -1,6 +1,6 @@
 ﻿using IdeoGo.API.Domain.Models;
 using IdeoGo.API.Domain.Repositories;
-using IdeoGo.API.Persistences.Contexts;
+using IdeoGo.API.Domain.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,14 +11,14 @@ namespace IdeoGo.API.Persistence.Repositories
 {
     public class UserRepository : BaseRepository, IUserRepository
     {
-        UserRepository(AppDbContext context) : base(context) { }
+        public UserRepository(AppDbContext context) : base(context) { }
 
         public async Task AddAsync(User user)
         {
             await _context.Users.AddAsync(user);
         }
 
-        public async Task<User> FindByIDAsync(int id)
+        public async Task<User> FindById(int id)
         {
             return await _context.Users.FindAsync(id);
         }

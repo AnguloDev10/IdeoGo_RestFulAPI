@@ -12,10 +12,11 @@ namespace IdeoGo.API.Services
     public class CategoryService : ICategoryService
     {
         private readonly ICategoryRepository _categoryRepository;
-
-        public CategoryService(ICategoryRepository categoryRepository)
+        public readonly IUnitOfWork _unitOfWork;
+        public CategoryService(ICategoryRepository categoryRepository, IUnitOfWork unitOfWork)
         {
             _categoryRepository = categoryRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<CategoryResponse> DeleteAsync(int id)
@@ -28,7 +29,7 @@ namespace IdeoGo.API.Services
             try
             {
                 _categoryRepository.Remove(existingCategory);
-             
+                await _unitOfWork.CompleteAsync();
 
                 return new CategoryResponse(existingCategory);
 
@@ -49,7 +50,7 @@ namespace IdeoGo.API.Services
             try
             {
                 await _categoryRepository.AddAsync(category);
-
+                await _unitOfWork.CompleteAsync();
                 return new CategoryResponse(category);
             }
             catch (Exception ex)
@@ -70,7 +71,7 @@ namespace IdeoGo.API.Services
             try
             {
                 _categoryRepository.Update(existingCategory);
-
+                await _unitOfWork.CompleteAsync();
                 return new CategoryResponse(existingCategory);
             }
             catch (Exception ex)
