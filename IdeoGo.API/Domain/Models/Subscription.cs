@@ -7,22 +7,22 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Domain.Models
 {
-    public class Membership
+    public class Subscription
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
-        [Column("Start_At")]
-        public DateTime StartAt { get; set; }
+        [MaxLength(60)]
+        public string Name { get; set; }
         [Required]
-        [Column("End_At")]
-        public DateTime EndAt { get; set; }
-
+        [Column(TypeName = "decimal(18,2)")]
+        [DisplayFormat(DataFormatString = "{0:N}")]
+        [Range(0.01, 120.00)]
+        public decimal Price { get; set; }
         [Required]
-        [Column("User_Id")]
-        //public int ProfileId { get; set; }
-        //public Profile Profile { get; set; }
-       
+        [Column("Number_User")]
+        [Range(0, int.MaxValue)]
+        public int NumberUser { get; set; }
     }
 }

@@ -33,10 +33,14 @@ namespace IdeoGo.API.Domain.Models
 
         public IList<Skill> Skills { get; set; } = new List<Skill>();
 
+        //public IList<>
      
         [Column("tag_id")]
         public int TagId { get; set; }
         public Tag Tag { get; set; }
+
+
+
     }
 
 

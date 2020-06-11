@@ -24,7 +24,7 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
         public DbSet<Project> Projects { get; set; }
         public DbSet<ProjectTag> ProjectTags { get; set; }
         public DbSet<ProjectUser> ProjectUsers { get; set; }
-
+        public DbSet<Subscription> Subscriptions { get; set; }
 
 
         public DbSet<ProjectSchedule> ProjectsSchedules { get; set; }
@@ -219,6 +219,14 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
                 .HasOne(pt => pt.User)
                 .WithMany(t => t.ProjectUsers)
                 .HasForeignKey(pt => pt.UserId);
+
+
+            builder.Entity<Subscription>().HasData(
+               new Subscription { Id = 1, Name = "Free", NumberUser = 1, Price = 0.00M },
+               new Subscription { Id = 2, Name = "Micro Entrepreneur", NumberUser = 6, Price = 12.90M },
+               new Subscription { Id = 3, Name = "Entrepreneur", NumberUser = 20, Price = 35.90M },
+               new Subscription { Id = 4, Name = "Advisor", NumberUser = 1, Price = 6.90M }
+               );
 
 
             builder.ApplySnakeCaseNamingConvention();

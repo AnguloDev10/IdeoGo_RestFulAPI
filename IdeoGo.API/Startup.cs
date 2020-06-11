@@ -86,11 +86,11 @@ namespace IdeoGo.API
             services.AddScoped<IMTaskService, MTaskService>();
 
 
-            services.AddAutoMapper(typeof(Startup));
 
 
             services.AddSwaggerGen(c => {
-                c.SwaggerDoc("v1", new OpenApiInfo {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
                     Title = "IdeoGoApi",
                     Version = "v1",
                     Description = "The best API of the SW52 ASP.NET Core Web API",
@@ -108,6 +108,13 @@ namespace IdeoGo.API
                     }
                 });
             });
+
+
+
+            services.AddAutoMapper(typeof(Startup));
+
+
+           
 
             
 
@@ -128,10 +135,6 @@ namespace IdeoGo.API
          
             app.UseSwagger();
 
-            app.UseSwaggerUI(c => {
-                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Ideogo.API V1");
-            });
-
             app.UseRouting();
             app.UseAuthorization();
 
@@ -140,7 +143,10 @@ namespace IdeoGo.API
                 endpoints.MapControllers();
             });
 
-            
+
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Ideogo.API V1");
+            });
 
 
         }
