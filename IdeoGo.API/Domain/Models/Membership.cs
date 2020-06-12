@@ -19,8 +19,8 @@ namespace IdeoGo.API.Domain.Models
         [Column("End_At")]
         public DateTime EndAt { get; set; }
 
-        [Required]
-        [Column("User_Id")]
+        //[Required]
+        //[Column("User_Id")]
         //public int ProfileId { get; set; }
         //public Profile Profile { get; set; }
        
