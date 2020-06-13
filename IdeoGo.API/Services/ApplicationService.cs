@@ -73,7 +73,7 @@ namespace IdeoGo.API.Services
             var existingApplication = await _applicationRepository.FindByIDAsync(id);
 
             if (existingApplication == null)
-                return new ApplicationResponse("Category not found.");
+                return new ApplicationResponse("Application not found.");
             existingApplication.OrderRequest = application.OrderRequest;
             try
             {

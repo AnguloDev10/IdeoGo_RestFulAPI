@@ -1,13 +1,18 @@
-﻿using System;
+﻿using IdeoGo.API.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace IdeoGo.API.Domain.Repositories
 {
-    interface IMembershipRepository
+    public  interface IMembershipRepository
     {
-        Task<DateTime> AddAsync();
-        Task<int> GetIdMembershipAsync(DateTime now);
+        Task AddAsync(Membership membership);
+        Task<Membership> FindByIdAsync(int id);
+        Task<IEnumerable<Membership>> ListAsync();
+        
+        void Remove(Membership existingMembership);
+        void Update(Membership existingMembership);
     }
 }

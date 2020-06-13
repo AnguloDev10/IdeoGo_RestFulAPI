@@ -19,7 +19,7 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
         public DbSet<Resource> Resources { get; set; }
         public DbSet<Skill> Skills { get; set; }
         public DbSet<Application> Aplications { get; set; }
-
+        public DbSet<Membership> Memberships { get; set; }
 
         public DbSet<Project> Projects { get; set; }
         public DbSet<ProjectTag> ProjectTags { get; set; }
@@ -167,6 +167,21 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
             builder.Entity<Application>().Property(p => p.DateSend).IsRequired();
             //builder.Entity<Application>().HasOne(p => p.User).WithMany(p => p.Applications).HasForeignKey(p => p.UserId);
             //builder.Entity<Application>().HasOne(p => p.Project).WithMany(p => p.Applications).HasForeignKey(p => p.ProjectId);
+
+            //Memberships
+            builder.Entity<Membership>().ToTable("Memberships");
+            builder.Entity<Membership>().HasKey(p => p.Id);
+            builder.Entity<Membership>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Membership>().Property(p => p.StartAt).IsRequired();
+            builder.Entity<Membership>().Property(p => p.EndAt).IsRequired();
+
+            //Subscriptions
+            builder.Entity<Subscription>().ToTable("Subscriptions");
+            builder.Entity<Subscription>().HasKey(p => p.Id);
+            builder.Entity<Subscription>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Subscription>().Property(p => p.Name).IsRequired();
+            builder.Entity<Subscription>().Property(p => p.Price).IsRequired();
+            builder.Entity<Subscription>().Property(p => p.NumberUser).IsRequired();
 
 
             ////William

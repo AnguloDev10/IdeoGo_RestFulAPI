@@ -8,6 +8,7 @@ namespace IdeoGo.API.Domain.Services.Communication
 {
     public class SkillResponse : BaseResponse<Skill>
     {
+      
 
         public SkillResponse(Skill skill) : base(skill)
         {
@@ -15,6 +16,6 @@ namespace IdeoGo.API.Domain.Services.Communication
 
         public SkillResponse(string message) : base(message) { }
 
-
+   
     }
 }

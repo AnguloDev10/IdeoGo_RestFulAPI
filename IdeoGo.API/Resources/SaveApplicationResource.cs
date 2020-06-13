@@ -10,13 +10,13 @@ namespace IdeoGo.API.Resources
     {
 
         [Required]
-        public int OrderRequest { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [MaxLength(30)]
-        public string State { get; set; }
+        public DateTime StartAt { get; set; }
 
         [Required]
-        public DateTime DateSend { get; set; }
+        public DateTime EndAt { get; set; }
     }
 }
