@@ -370,9 +370,6 @@ C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\bin\Debug\netcorea
 C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
 C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.csprojAssemblyReference.cache
-C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.csproj.CoreCompileInputs.cache
-C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.AssemblyInfoInputs.cache
 C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.AssemblyInfo.cs
 C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.RazorTargetAssemblyInfo.cache
@@ -383,3 +380,8 @@ C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\obj\Debug\netcorea
 C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.xml
 C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.pdb
 C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.genruntimeconfig.cache
+C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\bin\Debug\netcoreapp3.1\BoDi.dll
+C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\bin\Debug\netcoreapp3.1\Cucumber.Messages.dll
+C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\bin\Debug\netcoreapp3.1\Gherkin.dll
+C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.dll
+C:\Users\Ryzen\Downloads\IdeoGo_RestFulAPI-develop\IdeoGo.API\bin\Debug\netcoreapp3.1\Utf8Json.dll
