@@ -107,7 +107,7 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
             builder.Entity<ProjectSchedule>().Property(p => p.Name).IsRequired().HasMaxLength(30);
             builder.Entity<ProjectSchedule>().Property(p => p.Description).IsRequired().HasMaxLength(100);
 
-            builder.Entity<ProjectSchedule>().HasMany(p => p.MTasks).WithOne(p => p.ProjectSchedule).HasForeignKey(p => p.ProjectScheduleId);
+            //builder.Entity<ProjectSchedule>().HasMany(p => p.MTasks).WithOne(p => p.ProjectSchedule).HasForeignKey(p => p.ProjectScheduleId);
             builder.Entity<ProjectSchedule>().HasMany(p => p.Activities).WithOne(p => p.ProjectSchedule).HasForeignKey(p => p.ProjectScheduleId);
             
             //Goal Entity
@@ -131,7 +131,7 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
             builder.Entity<Activity>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Activity>().Property(p => p.Name).IsRequired().HasMaxLength(30);
             builder.Entity<Activity>().Property(p => p.Description).IsRequired().HasMaxLength(100);
-            builder.Entity<Activity>().HasOne(p => p.project).WithMany(p => p.Activities).HasForeignKey(p => p.projectId);
+            //builder.Entity<Activity>().HasOne(p => p.project).WithMany(p => p.Activities).HasForeignKey(p => p.projectId);
             builder.Entity<Activity>().HasOne(p => p.ProjectSchedule).WithMany(p => p.Activities).HasForeignKey(p => p.ProjectScheduleId);
 
             //Task
@@ -141,8 +141,8 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
             builder.Entity<MTask>().Property(p => p.Name).IsRequired().HasMaxLength(30);
             builder.Entity<MTask>().Property(p => p.Description).IsRequired().HasMaxLength(100);
             builder.Entity<MTask>().Property(p => p.DeliveryDate).IsRequired();
-            builder.Entity<MTask>().HasOne(p => p.ProjectSchedule).WithMany(p => p.MTasks).HasForeignKey(p => p.ProjectScheduleId);
-            builder.Entity<MTask>().HasOne(p => p.Project).WithMany(p => p.MTasks).HasForeignKey(p => p.ProjectId);
+            //builder.Entity<MTask>().HasOne(p => p.ProjectSchedule).WithMany(p => p.MTasks).HasForeignKey(p => p.ProjectScheduleId);
+            //builder.Entity<MTask>().HasOne(p => p.Project).WithMany(p => p.MTasks).HasForeignKey(p => p.ProjectId);
 
 
             /////////////Sergio
@@ -196,7 +196,7 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
             builder.Entity<Project>().HasMany(p => p.Applications).WithOne(p => p.Project).HasForeignKey(p => p.ProjectId);
             builder.Entity<Project>().HasMany(p => p.Goals).WithOne(p => p.Project).HasForeignKey(p => p.ProjectId);
             builder.Entity<Project>().HasMany(p => p.Requierements).WithOne(p => p.Project).HasForeignKey(p => p.ProjectId);
-            builder.Entity<Project>().HasMany(p => p.MTasks).WithOne(p => p.Project).HasForeignKey(p => p.ProjectId);
+            //builder.Entity<Project>().HasMany(p => p.MTasks).WithOne(p => p.Project).HasForeignKey(p => p.ProjectId);
             builder.Entity<Project>().HasOne(p => p.Tag).WithMany(p => p.Projects).HasForeignKey(p => p.TagId);
 
             // ProjectTag Entity
