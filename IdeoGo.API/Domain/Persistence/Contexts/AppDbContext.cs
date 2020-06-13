@@ -133,7 +133,13 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
             builder.Entity<Activity>().Property(p => p.Description).IsRequired().HasMaxLength(100);
             //builder.Entity<Activity>().HasOne(p => p.project).WithMany(p => p.Activities).HasForeignKey(p => p.projectId);
             builder.Entity<Activity>().HasOne(p => p.ProjectSchedule).WithMany(p => p.Activities).HasForeignKey(p => p.ProjectScheduleId);
-
+            builder.Entity<Activity>().HasData
+            (
+               new Activity
+               { Id = 100, Name = "Terminar proyecto", Description = "Terminar el proyecto a tiempo estimado de un mes", ProjectScheduleId=100 },
+               new Activity
+               { Id = 101, Name = "Lograr el presupuesto", Description = "Obtener el presupuesto establecido en un mes", ProjectScheduleId = 101 }
+           );
             //Task
             builder.Entity<MTask>().ToTable("Tasks");
             builder.Entity<MTask>().HasKey(p => p.Id);
