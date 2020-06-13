@@ -93,7 +93,7 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
             builder.Entity<User>().HasData
             (
                new User
-               { Id = 100, Email = "emailnumber1", Password = "1234" , Datesignup = new DateTime(2020, 5, 1, 8, 30, 52) },
+               { Id = 100, Email = "emailnumber1", Password = "1234", Datesignup = new DateTime(2020, 5, 1, 8, 30, 52) },
                new User
                { Id = 101, Email = "anonymousisback", Password = "4321", Datesignup = new DateTime(2020, 5, 1, 8, 30, 52) }
            );
@@ -109,7 +109,7 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
 
             //builder.Entity<ProjectSchedule>().HasMany(p => p.MTasks).WithOne(p => p.ProjectSchedule).HasForeignKey(p => p.ProjectScheduleId);
             builder.Entity<ProjectSchedule>().HasMany(p => p.Activities).WithOne(p => p.ProjectSchedule).HasForeignKey(p => p.ProjectScheduleId);
-            
+
             //Goal Entity
             builder.Entity<Goal>().ToTable("Goals");
             builder.Entity<Goal>().HasKey(p => p.Id);
@@ -120,7 +120,7 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
             builder.Entity<Goal>().HasData
             (
                new Goal
-               { Id = 100, Name="Terminar proyecto", Description= "Terminar el proyecto a tiempo estimado de un mes", EstimatedDate = new DateTime(2020, 5, 1, 8, 30, 52), ProjectId = 100 },
+               { Id = 100, Name = "Terminar proyecto", Description = "Terminar el proyecto a tiempo estimado de un mes", EstimatedDate = new DateTime(2020, 5, 1, 8, 30, 52), ProjectId = 100 },
                new Goal
                { Id = 101, Name = "Lograr el presupuesto", Description = "Obtener el presupuesto establecido en un mes", EstimatedDate = new DateTime(2020, 5, 1, 8, 30, 52), ProjectId = 101 }
            );
@@ -136,7 +136,7 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
             builder.Entity<Activity>().HasData
             (
                new Activity
-               { Id = 100, Name = "Terminar proyecto", Description = "Terminar el proyecto a tiempo estimado de un mes", ProjectScheduleId=100 },
+               { Id = 100, Name = "Terminar proyecto", Description = "Terminar el proyecto a tiempo estimado de un mes", ProjectScheduleId = 100 },
                new Activity
                { Id = 101, Name = "Lograr el presupuesto", Description = "Obtener el presupuesto establecido en un mes", ProjectScheduleId = 101 }
            );
@@ -160,7 +160,7 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
             builder.Entity<Requierement>().Property(p => p.Name).IsRequired().HasMaxLength(30);
             builder.Entity<Requierement>().Property(p => p.Description).IsRequired().HasMaxLength(100);
             builder.Entity<Requierement>().HasOne(p => p.Project).WithMany(p => p.Requierements).HasForeignKey(p => p.ProjectId);
-            
+
             //Resources
             builder.Entity<Resource>().ToTable("Resources");
             builder.Entity<Resource>().HasKey(p => p.Id);
@@ -175,7 +175,7 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
             builder.Entity<Skill>().Property(p => p.DegreesRequired).IsRequired().HasMaxLength(30);
             builder.Entity<Skill>().HasOne(p => p.UserProfile).WithMany(p => p.Skills).HasForeignKey(p => p.UserProfileId);
             builder.Entity<Skill>().HasOne(p => p.Tag).WithMany(p => p.Skills).HasForeignKey(p => p.TagId);
-            
+
             //Applications
 
             builder.Entity<Application>().ToTable("Applications");
@@ -204,7 +204,6 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
             builder.Entity<Project>().HasMany(p => p.Requierements).WithOne(p => p.Project).HasForeignKey(p => p.ProjectId);
             //builder.Entity<Project>().HasMany(p => p.MTasks).WithOne(p => p.Project).HasForeignKey(p => p.ProjectId);
             builder.Entity<Project>().HasOne(p => p.Tag).WithMany(p => p.Projects).HasForeignKey(p => p.TagId);
-
             // ProjectTag Entity
 
             builder.Entity<ProjectTag>().ToTable("ProjectTags");
