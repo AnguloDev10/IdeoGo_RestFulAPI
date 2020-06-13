@@ -90,13 +90,7 @@ namespace IdeoGo.API
 
 
             services.AddSwaggerGen(c => {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "IdeoGoApi", Version = "v1" });
-            });
-
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo
-                {
+                c.SwaggerDoc("v1", new OpenApiInfo { 
                     Version = "v1",
                     Title = "ToDo API",
                     Description = "A simple example ASP.NET Core Web API",
