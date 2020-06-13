@@ -7,5 +7,8 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiRB+9XsHxU+593g/V/f7QgAAAAACAAAAAAAQZgAAAAEAACAAAAD48gHrWUqMG2exxKJFay5cs0aEYjMMaNBpHINU4Az4lQAAAAAOgAAAAAIAACAAAADafWY2AZZLIR2mvJK5y1P9veMqr9greKIDCrFalNKui4AAAAC/6T503vbimQASyMfxTyFjimAFVwkKNdt1bzovYOwlqDMZ2PZU1qZuZm7qX/6delBESft5loRaB6cwUQqS3AtyVLWco4mc5CoTNmPz0yZnDPsuzd4LL3PcXEF0uJg5cGy9mU6rpn3Ce2VP8AZ9wr+FcIjIIaDRrauMlweZisNuqUAAAACcNcSWc5t+Z9cTO7DK9hkInDxoqCIqp1CSo9PQXTfhoORh/FN8oncCYWpvPqd7djRJD7EYAWBNgXGyvMzjzany</EncryptedPassword>
+	  <UseMSDeployExe>True</UseMSDeployExe>
+
+	  <AllowUntrustedCertificate>true</AllowUntrustedCertificate>
   </PropertyGroup>
 </Project>

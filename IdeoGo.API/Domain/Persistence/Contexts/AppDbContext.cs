@@ -117,6 +117,13 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
             builder.Entity<Goal>().Property(p => p.Name).IsRequired().HasMaxLength(30);
             builder.Entity<Goal>().Property(p => p.Description).IsRequired().HasMaxLength(100);
             //builder.Entity<Goal>().Property(p => p.EstimatedDate).IsRequired();
+            builder.Entity<Goal>().HasData
+            (
+               new Goal
+               { Id = 100, Name="Terminar proyecto", Description= "Terminar el proyecto a tiempo estimado de un mes", EstimatedDate = new DateTime(2020, 5, 1, 8, 30, 52), ProjectId = 100 },
+               new Goal
+               { Id = 101, Name = "Lograr el presupuesto", Description = "Obtener el presupuesto establecido en un mes", EstimatedDate = new DateTime(2020, 5, 1, 8, 30, 52), ProjectId = 101 }
+           );
 
             //Activity Entity
             builder.Entity<Activity>().ToTable("Activities");

@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <StartupObject>IdeoGo.API.Program</StartupObject>
+    <OutputType>WinExe</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
