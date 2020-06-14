@@ -1,31 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using TechTalk.SpecFlow;
+using IdeoGo.API.Domain.Models;
 
 namespace NUnitTestIdeoGo.Steps
 {
     [Binding]
     public sealed class ProjectDefinition1
     {
-        [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculator(int p0)
+        private User user = new User();
+        [Given(@"I have entered my password  to register")]
+        public void GivenIHaveEnteredMyPasswordToRegister(string _password)
+        {
+            user.Password = _password;
+        }
+
+        [Given(@"I have entered my email  to register")]
+        public void GivenIHaveEnteredMyEmailToRegister(string _email)
+        {
+            user.Email = _email;
+        }
+
+        [When(@"I press register")]
+        public void WhenIPressRegister()
         {
             ScenarioContext.Current.Pending();
         }
 
-        [When(@"I press add")]
-        public void WhenIPressAdd()
+        [Then(@"the user should be created")]
+        public void ThenTheUserShouldBeCreated()
         {
             ScenarioContext.Current.Pending();
         }
 
-        [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeOnTheScreen(int p0)
-        {
-            ScenarioContext.Current.Pending();
-        }
 
     }
 }
