@@ -1,11 +1,10 @@
 ﻿Feature: Project
 	
-As a user I want to add a my password and email 
+As an entrepreneur, I want to list all the users of my project
 
 @mytag
-Scenario: Create password and email
-	Given I have entered my password  to register 
-	And I have entered my email  to register
+Scenario: list user of my project
+	Given  I have selected my project
 	
-	When I press register
-	Then  the user should be created
+	When  I press search for users
+	Then  I get the whole list of users the  my project
