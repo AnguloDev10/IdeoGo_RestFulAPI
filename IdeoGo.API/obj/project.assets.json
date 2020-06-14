@@ -6696,27 +6696,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sergio_\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\NIvra\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sergio_\\Desktop\\FOLDERGO\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\IdeoGo.API.csproj",
+      "projectUniqueName": "C:\\Users\\NIvra\\Projects\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
       "projectName": "IdeoGo.API",
-      "projectPath": "C:\\Users\\Sergio_\\Desktop\\FOLDERGO\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\IdeoGo.API.csproj",
-      "packagesPath": "C:\\Users\\Sergio_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sergio_\\Desktop\\FOLDERGO\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\obj\\",
+      "projectPath": "C:\\Users\\NIvra\\Projects\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
+      "packagesPath": "C:\\Users\\NIvra\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\NIvra\\Projects\\IdeoGo_RestFulAPI\\IdeoGo.API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Sergio_\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\NIvra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -6802,7 +6795,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
