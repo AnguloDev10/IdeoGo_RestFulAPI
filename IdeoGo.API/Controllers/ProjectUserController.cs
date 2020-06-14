@@ -14,37 +14,37 @@ namespace IdeoGo.API.Controllers
     [Route("/api/[controller]")]
     public class ProjectUserController: Controller
     {
-        private readonly ITagService _tagService;
-        private readonly IProjectTagService _projectTagService;
+        private readonly IUserService _userservice;
+        private readonly IProjectUserService _projectUserService;
         private readonly IMapper _mapper;
 
 
-        public ProjectUserController(ITagService tagService, IProjectTagService projectTagService, IMapper mapper)
+        public ProjectUserController(IUserService userservice, IProjectUserService projectUserService, IMapper mapper)
         {
-            _tagService = tagService;
-            _projectTagService = projectTagService;
+            _userservice = userservice;
+            _projectUserService = projectUserService;
             _mapper = mapper;
         }
 
-        //[HttpGet]
-        //public async Task<IEnumerable<UserResource>> GetAllByProductIdAsync(int productId)
-        //{
-        //    var tags = await _tagService.Lis(productId);
-        //    var resources = _mapper
-        //        .Map<IEnumerable<Tag>, IEnumerable<TagResource>>(tags);
-        //    return resources;
-        //}
+        [HttpGet]
+        public async Task<IEnumerable<UserResource>> GetAllByProjectctIdAsync(int projectId)
+        {
+            var users = await _userservice.ListByProjectIdAsync(projectId);
+            var resources = _mapper
+                .Map<IEnumerable<User>, IEnumerable<UserResource>>(users);
+            return resources;
+        }
 
         [HttpPost("{tagId}")]
-        public async Task<IActionResult> AssignProductTag(int productId, int tagId)
+        public async Task<IActionResult> AssingProject(int projectId, int userId)
         {
 
-            var result = await _projectTagService.AssignProjectTagAsync(productId, tagId);
+            var result = await _projectUserService.AssignProjectUserAsync(projectId, userId);
             if (!result.Success)
                 return BadRequest(result.Message);
 
-            var tagResource = _mapper.Map<Tag, TagResource>(result.Resource.Tag);
-            return Ok(tagResource);
+            var userResource = _mapper.Map<User, UserResource>(result.Resource.User);
+            return Ok(userResource);
 
         }
 

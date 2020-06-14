@@ -13,7 +13,7 @@ namespace IdeoGo.API.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly IUnitOfWork _unitOfWork;
-
+        private readonly IProjectUserRepository _projectUserRepository;
 
         public UserService(IUserRepository userRepository, IUnitOfWork unitOfWork)
         {
@@ -41,9 +41,26 @@ namespace IdeoGo.API.Services
             }
         }
 
+        public async  Task<UserResponse> GetByIdAsync(int id)
+        {
+            var existingUser = await _userRepository.FindById(id);
+
+            if (existingUser == null)
+                return new UserResponse("User not found");
+            return new UserResponse(existingUser);
+
+        }
+
         public async Task<IEnumerable<User>> ListAsync()
         {
             return await _userRepository.ListAsync();
+        }
+
+        public  async Task<IEnumerable<User>> ListByProjectIdAsync(int projectId)
+        {
+            var projectUsers = await _projectUserRepository.ListByProjectIdAsync(projectId);
+            var users = projectUsers.Select(pt => pt.User).ToList();
+            return users;
         }
 
         public async Task<UserResponse> SaveAsync(User user)
