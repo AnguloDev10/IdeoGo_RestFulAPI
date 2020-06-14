@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sergio_\\Desktop\\FOLDERGO\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\IdeoGo.API.csproj": {}
+    "C:\\Users\\ERICK PC\\Documents\\Aplicaciones open y web\\web\\proyecto IdeoGo\\Api Rest IdeoGo\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\IdeoGo.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sergio_\\Desktop\\FOLDERGO\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\IdeoGo.API.csproj": {
+    "C:\\Users\\ERICK PC\\Documents\\Aplicaciones open y web\\web\\proyecto IdeoGo\\Api Rest IdeoGo\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\IdeoGo.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sergio_\\Desktop\\FOLDERGO\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\IdeoGo.API.csproj",
+        "projectUniqueName": "C:\\Users\\ERICK PC\\Documents\\Aplicaciones open y web\\web\\proyecto IdeoGo\\Api Rest IdeoGo\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\IdeoGo.API.csproj",
         "projectName": "IdeoGo.API",
-        "projectPath": "C:\\Users\\Sergio_\\Desktop\\FOLDERGO\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\IdeoGo.API.csproj",
-        "packagesPath": "C:\\Users\\Sergio_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sergio_\\Desktop\\FOLDERGO\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\obj\\",
+        "projectPath": "C:\\Users\\ERICK PC\\Documents\\Aplicaciones open y web\\web\\proyecto IdeoGo\\Api Rest IdeoGo\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\IdeoGo.API.csproj",
+        "packagesPath": "C:\\Users\\ERICK PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ERICK PC\\Documents\\Aplicaciones open y web\\web\\proyecto IdeoGo\\Api Rest IdeoGo\\IdeoGo_RestFulAPI-develop\\IdeoGo.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Sergio_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ERICK PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -75,6 +75,30 @@
               "target": "Package",
               "version": "[8.0.20, )"
             },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[3.141.0, )"
+            },
+            "Selenium.WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[83.0.4103.3900, )"
+            },
+            "SpecFlow": {
+              "target": "Package",
+              "version": "[3.1.97, )"
+            },
+            "SpecFlow.Assist.Dynamic": {
+              "target": "Package",
+              "version": "[1.4.2, )"
+            },
+            "SpecFlow.NUnit": {
+              "target": "Package",
+              "version": "[3.1.97, )"
+            },
+            "SpecFlow.Tools.MsBuild.Generation": {
+              "target": "Package",
+              "version": "[3.1.97, )"
+            },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
               "version": "[5.4.1, )"
@@ -106,7 +130,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
