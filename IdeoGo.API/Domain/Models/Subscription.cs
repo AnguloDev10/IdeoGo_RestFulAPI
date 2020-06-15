@@ -24,5 +24,7 @@ namespace IdeoGo.API.Domain.Models
         [Column("Number_User")]
         [Range(0, int.MaxValue)]
         public int NumberUser { get; set; }
+
+        public User User { get; set; }
     }
 }
