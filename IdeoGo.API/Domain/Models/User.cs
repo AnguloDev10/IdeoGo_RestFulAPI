@@ -34,7 +34,7 @@ namespace IdeoGo.API.Domain.Models
 
         public IList<Application> Applications { get; set; }
 
-
+        public IList<Membership> Memberships { get; set; }
 
     }
 }
