@@ -38,7 +38,7 @@ namespace IdeoGo.API.Services
             }
             catch (Exception ex)
             {
-                return new TagResponse($"An error ocurred while deleting the category : {ex.Message}");
+                return new TagResponse($"An error ocurred while deleting the tag : {ex.Message}");
             }
         }
 
@@ -63,7 +63,7 @@ namespace IdeoGo.API.Services
             catch (Exception ex)
             {
 
-                return new TagResponse($"An error ocurred while saving the category : {ex.Message}");
+                return new TagResponse($"An error ocurred while saving the tag : {ex.Message}");
             }
             throw new NotImplementedException();
         }
@@ -83,7 +83,7 @@ namespace IdeoGo.API.Services
             }
             catch (Exception ex)
             {
-                return new TagResponse($"An error ocurred while updating the category : {ex.Message}");
+                return new TagResponse($"An error ocurred while updating the tag : {ex.Message}");
             }
 
             throw new NotImplementedException();
