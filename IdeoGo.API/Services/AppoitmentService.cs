@@ -24,22 +24,64 @@ namespace IdeoGo.API.Services
         }
         public async Task<AppoitmentResponse> DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var existingTag = await _appoitmentRepository.FindByIDAsync(id);
+
+            if (existingTag == null)
+                return new AppoitmentResponse("Appoitment not found");
+
+            try
+            {
+                _appoitmentRepository.Remove(existingTag);
+                await _unitOfWork.CompleteAsync();
+
+                return new AppoitmentResponse(existingTag);
+            }
+            catch (Exception ex)
+            {
+                return new AppoitmentResponse($"An error ocurred while deleting tag: {ex.Message}");
+            }
         }
 
         public async Task<IEnumerable<Appoitment>> ListAsync()
         {
-            throw new NotImplementedException();
+            return await _appoitmentRepository.ListAsync();
         }
 
         public async Task<AppoitmentResponse> SaveAsync(Appoitment appoitment)
         {
-            throw new NotImplementedException();
+            try
+            {
+                await _appoitmentRepository.AddAsync(appoitment);
+                await _unitOfWork.CompleteAsync();
+
+                return new AppoitmentResponse(appoitment);
+            }
+            catch (Exception ex)
+            {
+                return new AppoitmentResponse($"An error ocurred while saving the tag: {ex.Message}");
+            }
         }
 
         public async Task<AppoitmentResponse> UpdateAsync(int id, Appoitment appoitment)
         {
-            throw new NotImplementedException();
+            var existingTag = await _appoitmentRepository.FindByIDAsync(id);
+
+            if (existingTag == null)
+                return new AppoitmentResponse("Appoitment not found");
+
+            existingTag.Date = appoitment.Date;
+
+            try
+            {
+                _appoitmentRepository.Update(existingTag);
+                await _unitOfWork.CompleteAsync();
+
+                return new AppoitmentResponse(existingTag);
+            }
+            catch (Exception ex)
+            {
+                return new AppoitmentResponse($"An error ocurred while updating tag: {ex.Message}");
+            }
         }
     }
 }
