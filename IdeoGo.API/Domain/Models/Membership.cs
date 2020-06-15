@@ -22,6 +22,7 @@ namespace IdeoGo.API.Domain.Models
         [Required]
         public string Name { get; set; }
 
+        public int UserId { get; set; }
         public User User { get; set; }
         //[Required]
         //[Column("User_Id")]

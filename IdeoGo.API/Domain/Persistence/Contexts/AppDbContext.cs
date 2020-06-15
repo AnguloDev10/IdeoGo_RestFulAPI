@@ -88,6 +88,8 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
             builder.Entity<User>().Property(p => p.Password).IsRequired().HasMaxLength(20);
             builder.Entity<User>().Property(p => p.Datesignup).IsRequired();
             builder.Entity<User>().HasMany(p => p.Applications).WithOne(p => p.User).HasForeignKey(p => p.UserId);
+            builder.Entity<User>().HasMany(p => p.Subscriptions).WithOne(p => p.User).HasForeignKey(p => p.UserId);
+            builder.Entity<User>().HasMany(p => p.Memberships).WithOne(p => p.User).HasForeignKey(p => p.UserId);
             builder.Entity<User>().HasData
             (
                new User
