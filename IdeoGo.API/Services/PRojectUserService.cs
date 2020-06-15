@@ -26,7 +26,7 @@ namespace IdeoGo.API.Services
             }
             catch (Exception ex)
             {
-                return new ProjectUserResponse($"An error ocurred while assigning Tag to Product: {ex.Message}");
+                return new ProjectUserResponse($"An error ocurred while assigning User to Project: {ex.Message}");
             }
         }
 
@@ -56,7 +56,7 @@ namespace IdeoGo.API.Services
             }
             catch (Exception ex)
             {
-                return new ProjectUserResponse($"An error ocurred while assigning Tag to Product: {ex.Message}");
+                return new ProjectUserResponse($"An error ocurred while assigning User to Project: {ex.Message}");
             }
 
         }
