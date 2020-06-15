@@ -15,8 +15,8 @@ namespace IdeoGo.API.Domain.Models
         public DateTime Date { get; set; }
 
 
-        [Column("Project_Id")]
-        public int ProjectleaderId { get; set; }
-        public User User { get; set; }
+        //[Column("Project_Id")]
+        //public int ProjectleaderId { get; set; }
+        //public User User { get; set; }
     }
 }

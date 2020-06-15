@@ -15,6 +15,7 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Category> Categories { get; set; }
 
+        public DbSet<Appoitment> Appoitments { get; set; }
         public DbSet<Requierement> Requierements { get; set; }
         public DbSet<Resource> Resources { get; set; }
         public DbSet<Skill> Skills { get; set; }
@@ -130,6 +131,13 @@ namespace IdeoGo.API.Domain.Persistence.Contexts
             builder.Entity<Domain.Models.MTask>().Property(p => p.Name).IsRequired().HasMaxLength(30);
             builder.Entity<Domain.Models.MTask>().Property(p => p.Description).IsRequired().HasMaxLength(100);
             builder.Entity<Domain.Models.MTask>().Property(p => p.DeliveryDate).IsRequired();
+
+            //Appoitment
+            builder.Entity<Domain.Models.Appoitment>().ToTable("Appotiments");
+            builder.Entity<Domain.Models.Appoitment>().HasKey(p => p.Id);
+            builder.Entity<Domain.Models.Appoitment>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Domain.Models.Appoitment>().Property(p => p.Date).IsRequired().HasMaxLength(30);
+            
 
 
             /////////////Sergio
