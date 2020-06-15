@@ -6702,11 +6702,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ryzen\\Documents\\Downloads\\IdeoGo_RestFulAPI-3462595513320b2f10a3a00c3c000c7844d6696a\\IdeoGo.API\\IdeoGo.API.csproj",
+      "projectUniqueName": "D:\\ga\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
       "projectName": "IdeoGo.API",
-      "projectPath": "C:\\Users\\Ryzen\\Documents\\Downloads\\IdeoGo_RestFulAPI-3462595513320b2f10a3a00c3c000c7844d6696a\\IdeoGo.API\\IdeoGo.API.csproj",
+      "projectPath": "D:\\ga\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
       "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ryzen\\Documents\\Downloads\\IdeoGo_RestFulAPI-3462595513320b2f10a3a00c3c000c7844d6696a\\IdeoGo.API\\obj\\",
+      "outputPath": "D:\\ga\\IdeoGo_RestFulAPI\\IdeoGo.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
