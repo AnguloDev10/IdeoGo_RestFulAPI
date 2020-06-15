@@ -37,7 +37,7 @@ namespace IdeoGo.API.Services
             }
             catch (Exception ex)
             {
-                return new UserResponse($"An error ocurred while deleting the category : {ex.Message}");
+                return new UserResponse($"An error ocurred while deleting the user : {ex.Message}");
             }
         }
 
