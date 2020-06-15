@@ -13,5 +13,10 @@ namespace IdeoGo.API.Domain.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public DateTime Date { get; set; }
+
+
+        [Column("Project_Id")]
+        public int ProjectleaderId { get; set; }
+        public User User { get; set; }
     }
 }

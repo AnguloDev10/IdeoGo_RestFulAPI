@@ -93,7 +93,7 @@ namespace IdeoGo.API
                 c.SwaggerDoc("v1", new OpenApiInfo { 
                     Version = "v1",
                     Title = "ToDo API",
-                    Description = "A simple example ASP.NET Core Web API",
+                    Description = "A IdeoGo API with ASP.NET Core Web API",
                     TermsOfService = new Uri("https://example.com/terms"),
                     Contact = new OpenApiContact
                     {
