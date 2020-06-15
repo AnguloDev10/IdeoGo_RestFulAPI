@@ -37,7 +37,7 @@ namespace IdeoGo.API.Services
             }
             catch (Exception ex)
             {
-                return new ProjectResponse($"An error ocurred while deleting guardian: {ex.Message}");
+                return new ProjectResponse($"An error ocurred while deleting project: {ex.Message}");
             }
         }
 
@@ -66,7 +66,7 @@ namespace IdeoGo.API.Services
             }
             catch (Exception ex)
             {
-                return new ProjectResponse($"An error ocurred while saving the guardian: {ex.Message}");
+                return new ProjectResponse($"An error ocurred while saving the project: {ex.Message}");
             }
         }
 
@@ -90,7 +90,7 @@ namespace IdeoGo.API.Services
             }
             catch (Exception ex)
             {
-                return new ProjectResponse($"An error ocurred while updating guardian: {ex.Message}");
+                return new ProjectResponse($"An error ocurred while updating project: {ex.Message}");
             }
         }
     }
