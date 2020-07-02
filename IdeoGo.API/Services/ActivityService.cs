@@ -22,6 +22,7 @@ namespace IdeoGo.API.Services
 
         public async Task<ActivityResponse> DeleteAsync(int id)
         {
+        
             var existingActivity = await _activityRepository.FindByIDAsync(id);
 
             if (existingActivity == null)
