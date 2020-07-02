@@ -8,9 +8,6 @@ namespace IdeoGo.API.Resources
 {
     public class SaveMTaskResource
     {
-        [Required]
-        [MaxLength(30)]
-        public string Title { get; set; }
 
         [Required]
         [MaxLength(30)]
