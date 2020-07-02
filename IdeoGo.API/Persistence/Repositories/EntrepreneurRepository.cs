@@ -31,6 +31,7 @@ namespace IdeoGo.API.Persistence.Repositories
         public void Remove(Entrepreneur entrepreneur)
         {
             _context.Enterpreneurs.Remove(entrepreneur);
+            
         }
 
         public Task<Entrepreneur> FindByIDAsync(int id)
