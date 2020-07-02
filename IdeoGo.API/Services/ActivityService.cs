@@ -30,6 +30,7 @@ namespace IdeoGo.API.Services
 
             try
             {
+            
                 _activityRepository.Remove(existingActivity);
 
 
