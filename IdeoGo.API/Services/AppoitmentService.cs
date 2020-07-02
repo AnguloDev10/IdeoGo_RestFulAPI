@@ -22,6 +22,23 @@ namespace IdeoGo.API.Services
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
+
+        public async Task<AppoitmentResponse> AssignAppointmentScheduleAsync(int appointId, int schedId)
+        {
+            try
+            {
+
+                await _appoitmentRepository.AssignAppointmentSchedule(appointId, schedId);
+                await _unitOfWork.CompleteAsync();
+                Appoitment appoitment = await _appoitmentRepository.FindByIDAsync(appointId);
+                return new AppoitmentResponse(appoitment);
+            }
+            catch (Exception ex)
+            {
+                return new AppoitmentResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
+
         public async Task<AppoitmentResponse> DeleteAsync(int id)
         {
             var existingTag = await _appoitmentRepository.FindByIDAsync(id);
@@ -59,6 +76,21 @@ namespace IdeoGo.API.Services
             catch (Exception ex)
             {
                 return new AppoitmentResponse($"An error ocurred while saving the tag: {ex.Message}");
+            }
+        }
+
+        public async Task<AppoitmentResponse> UnassignAppointmentScheduleAsync(int appointId, int schedId)
+        {
+            try
+            {
+                Appoitment appoitment = await _appoitmentRepository.FindByIDAsync(appointId);
+                _appoitmentRepository.Remove(appoitment);
+                await _unitOfWork.CompleteAsync();
+                return new AppoitmentResponse(appoitment);
+            }
+            catch (Exception ex)
+            {
+                return new AppoitmentResponse($"An error ocurred while assigning: {ex.Message}");
             }
         }
 

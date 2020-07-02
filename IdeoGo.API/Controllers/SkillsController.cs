@@ -80,5 +80,18 @@ namespace IdeoGo.API.Controllers
             var skillResource = _mapper.Map<Skill, SkillResource>(result.Resource);
             return Ok(skillResource);
         }
+
+        [HttpPost("{profileId}")]
+        public async Task<IActionResult> AssignSkillProfile(int skillId, int profileId)
+        {
+
+            var result = await _skillService.AssignSkillProfileAsync(skillId, profileId);
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var Resource = _mapper.Map<Domain.Models.Profile, ProfileResource>(result.Resource.UserProfile);
+            return Ok(Resource);
+
+        }
     }
 }

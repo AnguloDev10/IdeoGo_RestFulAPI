@@ -15,7 +15,7 @@ namespace IdeoGo.API.Resources
         public string Name { get; set; }
 
         [Required]
-        public EGender Gender { get; set; }
+        public int Gender { get; set; }
 
         [Required]
         [MaxLength(80)]

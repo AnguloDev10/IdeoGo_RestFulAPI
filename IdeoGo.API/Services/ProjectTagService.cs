@@ -47,9 +47,9 @@ namespace IdeoGo.API.Services
             return await _projectTagRepository.ListByProjectIdAsync(projectId);
         }
 
-        public async  Task<IEnumerable<ProjectTag>> ListByTagIdAsync(int tagId)
+        public async  Task<IEnumerable<ProjectTag>> ListByTagIdAsync(int tagid)
         {
-            return await _projectTagRepository.ListByTagIdAsync(tagId);
+            return await _projectTagRepository.ListByTagIdAsync(tagid);
         }
 
         public async  Task<ProjectTagResponse> UnassignProjectTagAsync(int projectId, int tagId)

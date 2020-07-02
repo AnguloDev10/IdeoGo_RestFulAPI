@@ -14,5 +14,7 @@ namespace IdeoGo.API.Domain.Services
         Task<SubscriptionResponse> SaveAsync(Subscription subscription);
         Task<SubscriptionResponse> UpdateAsync(int id, Subscription subscription);
         Task<SubscriptionResponse> DeleteAsync(int id);
+        Task<SubscriptionResponse> AssignSubUserAsync(int subId, int userId);
+        Task<SubscriptionResponse> UnassignSubUserAsync(int subId, int userId);
     }
 }

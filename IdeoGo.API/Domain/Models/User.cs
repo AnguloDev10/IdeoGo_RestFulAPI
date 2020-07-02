@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace IdeoGo.API.Domain.Models
@@ -15,10 +16,14 @@ namespace IdeoGo.API.Domain.Models
 
         [Required]
         public string Email { get; set; }
+
         [Required]
+        [JsonIgnore]
         public string Password { get; set; }
         [Required]
         public DateTime Datesignup { get; set; }
+
+        public string Token { get; set; }
 
         //[Required]
         //[Column("profile_id")]

@@ -10,7 +10,11 @@ namespace IdeoGo.API.Domain.Repositories
     {
         Task<IEnumerable<ProjectTag>> ListAsync();
         Task<IEnumerable<ProjectTag>> ListByProjectIdAsync(int projectId);
-        Task<IEnumerable<ProjectTag>> ListByTagIdAsync(int tagId);
+        Task<IEnumerable<ProjectTag>> ListByTagIdAsync(int tag);
+        
+
+
+
         Task<ProjectTag> FindByProjectIdAndTagId(int projectId, int tagId);
         Task AddAsync(ProjectTag projectTag);
         void Remove(ProjectTag projectTag);

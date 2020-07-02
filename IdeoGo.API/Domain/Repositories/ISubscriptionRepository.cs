@@ -13,5 +13,8 @@ namespace IdeoGo.API.Domain.Repositories
         void Update(Subscription subscription);
         void Remove(Subscription subscription);
         Task<IEnumerable<Subscription>> ListAsync();
+
+        Task AssigSuscriptionUser(int susId, int userId);
+        void UnassignSuscriptionUserAsync(int susId, int userId);
     }
 }

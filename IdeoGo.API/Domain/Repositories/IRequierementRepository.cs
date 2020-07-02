@@ -13,5 +13,8 @@ namespace IdeoGo.API.Domain.Repositories
         void Update(Requierement requierement);
         void Remove(Requierement requierement);
         Task<Requierement> FindByIdAsync(int id);
+
+        Task AssignRequirementProject(int requirementId, int projectId);
+        void UnassignRequirementProject(int requirementId, int projectId);
     }
 }

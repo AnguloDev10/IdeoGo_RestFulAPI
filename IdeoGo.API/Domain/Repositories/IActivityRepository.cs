@@ -14,5 +14,8 @@ namespace IdeoGo.API.Domain.Repositories
         Task<Activity> FindByIDAsync(int id);
         void Update(Activity activity);
         void Remove(Activity activity);
+
+        Task AssignActivitySchedule(int activityId, int scheduleId);
+        void UnassignActivitySchedule(int activityId, int scheduleId);
     }
 }

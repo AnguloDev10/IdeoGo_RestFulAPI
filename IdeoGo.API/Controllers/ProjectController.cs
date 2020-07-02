@@ -46,6 +46,14 @@ namespace IdeoGo.API.Controllers
             return Ok(projectResource);
 
         }
+        [HttpGet("leader/{projectLeaderId}")]
+        public async Task<IActionResult> ListByProjectLeaderIdAsync(int projectLeaderId)
+        {
+            var result = await _projectService.ListByProjectLeaderIdAsync(projectLeaderId);
+            var projectResource = _mapper.Map<IEnumerable<Project>,IEnumerable<ProjectResource>>(result);
+            return Ok(projectResource);
+        }
+        
 
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] SaveProjectResource resource)
@@ -84,6 +92,34 @@ namespace IdeoGo.API.Controllers
             var projectResource = _mapper.Map<Project, ProjectResource>(result.Resource);
             return Ok(projectResource);
         }
+
+        [HttpPost("{userId}")]
+        public async Task<IActionResult> AssignProjectLeader(int projectId, int userId)
+        {
+
+            var result = await _projectService.AssignProjectLeaderAsync(projectId, userId);
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var Resource = _mapper.Map<User, UserResource>(result.Resource.ProjectLeader);
+            return Ok(Resource);
+
+        }
+
+
+        [HttpPost("{tagId}")]
+        public async Task<IActionResult> AssignProjectTag(int projectId, int tagId)
+        {
+
+            var result = await _projectService.AssignProjectTagAsync(projectId, tagId);
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var Resource = _mapper.Map<Tag, TagResource>(result.Resource.Tag);
+            return Ok(Resource);
+
+        }
+
 
     }
 }

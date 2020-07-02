@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Reflection.Metadata.Ecma335;
 
 namespace IdeoGo.API.Persistence.Repositories
 {
@@ -43,5 +44,24 @@ namespace IdeoGo.API.Persistence.Repositories
             .Where(p => p.CategoryId == categoryId)
             .Include(p => p.Category)
             .ToListAsync();
+
+        public async Task AssignCategoryTag(int categoryId, int tagId)
+        {
+            Tag TagCategory = await FindByIDAsync(tagId);
+            if (TagCategory == null)
+            {
+                TagCategory = new Tag { Id = tagId, CategoryId = categoryId };
+                await AddAsync(TagCategory);
+            }
+        }
+
+        public async void UnassignCategoryTag(int categoryId, int tagId)
+        {
+            Tag TagCategory = await FindByIDAsync(tagId);
+            if (TagCategory == null)
+            {
+               Remove(TagCategory);
+            }
+        }
     }
 }

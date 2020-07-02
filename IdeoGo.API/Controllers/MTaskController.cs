@@ -81,5 +81,19 @@ namespace IdeoGo.API.Controllers
             var mTaskResource = _mapper.Map<MTask, MTaskResource>(result.Resource);
             return Ok(mTaskResource);
         }
+
+
+        [HttpPost("{projectScheduleId}")]
+        public async Task<IActionResult> AssignTaskSchedule(int taskId, int scheduleId)
+        {
+
+            var result = await _mTaskService.AssignTaskScheduleAsync(taskId, scheduleId);
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var scheduleResource = _mapper.Map<ProjectSchedule, ProjectScheduleResource>(result.Resource.ProjectSchedule);
+            return Ok(scheduleResource);
+
+        }
     }
 }

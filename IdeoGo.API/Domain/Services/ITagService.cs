@@ -16,6 +16,7 @@ namespace IdeoGo.API.Domain.Services
         Task<TagResponse> UpdateAsync(int id, Tag tag);
         Task<TagResponse> DeleteAsync(int id);
 
-        
+        Task<TagResponse> AssignCategoryTagAsync(int categoryId, int tagId);
+        Task<TagResponse> UnassignCategoryTagAsync(int categoryId, int tagId);
     }
 }

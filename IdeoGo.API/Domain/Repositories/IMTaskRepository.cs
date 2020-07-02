@@ -13,5 +13,8 @@ namespace IdeoGo.API.Domain.Repositories
         Task<MTask> FindById(int id);
         void Update(MTask mTask);
         void Remove(MTask mTask);
+
+        Task AssignTaskSchedule(int taskId, int scheduleId);
+        void UnassignTaskSchedule(int taskId, int scheduleId);
     }
 }

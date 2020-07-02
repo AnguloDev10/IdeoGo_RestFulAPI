@@ -41,7 +41,7 @@ namespace IdeoGo.API.Services
             try
             {
                 await _subscriptionRepository.AddAsync(subscription);
-
+                await _unitOfWork.CompleteAsync();
                 return new SubscriptionResponse(subscription);
             }
             catch (Exception ex)
@@ -62,7 +62,7 @@ namespace IdeoGo.API.Services
             try
             {
                 _subscriptionRepository.Update(existingSubscription);
-
+                await _unitOfWork.CompleteAsync();
                 return new SubscriptionResponse(existingSubscription);
             }
             catch (Exception ex)
@@ -81,12 +81,42 @@ namespace IdeoGo.API.Services
             try
             {
                 _subscriptionRepository.Remove(existingSubscription);
-
+                await _unitOfWork.CompleteAsync();
                 return new SubscriptionResponse(existingSubscription);
             }
             catch (Exception ex)
             {
                 return new SubscriptionResponse($"An error ocurred while deleting Subscription: {ex.Message}");
+            }
+        }
+
+        public async Task<SubscriptionResponse> AssignSubUserAsync(int subId, int userId)
+        {
+            try
+            {
+                await _subscriptionRepository.AssigSuscriptionUser(subId, userId);
+                await _unitOfWork.CompleteAsync();
+                Subscription sub = await _subscriptionRepository.FindByIDAsync(subId);
+                return new SubscriptionResponse(sub);
+            }
+            catch (Exception ex)
+            {
+                return new SubscriptionResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
+
+        public async Task<SubscriptionResponse> UnassignSubUserAsync(int subId, int userId)
+        {
+            try
+            {
+                Subscription sub = await _subscriptionRepository.FindByIDAsync(subId);
+                _subscriptionRepository.Remove(sub);
+                await _unitOfWork.CompleteAsync();
+                return new SubscriptionResponse(sub);
+            }
+            catch (Exception ex)
+            {
+                return new SubscriptionResponse($"An error ocurred while assigning: {ex.Message}");
             }
         }
     }

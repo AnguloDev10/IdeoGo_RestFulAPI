@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Controllers
 {
+    [Produces("application/json")]
+    [Route("/api/[controller]")]
     public class MembershipController : Controller
     {
         private readonly IMembershipService _membershipService;
@@ -79,6 +81,19 @@ namespace IdeoGo.API.Controllers
                 return BadRequest(result.Message);
             var membershipResource = _mapper.Map<Membership, MembershipResource>(result.Resource);
             return Ok(membershipResource);
+        }
+
+        [HttpPost("{userId}")]
+        public async Task<IActionResult> AssignMemberUser(int membershipId, int userId)
+        {
+
+            var result = await _membershipService.AssignMemberUserAsync(membershipId, userId);
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var scheduleResource = _mapper.Map<User, UserResource>(result.Resource.User);
+            return Ok(scheduleResource);
+
         }
 
     }

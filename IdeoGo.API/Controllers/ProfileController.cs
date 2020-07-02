@@ -83,6 +83,33 @@ namespace IdeoGo.API.Controllers
             var profileResource = _mapper.Map<Domain.Models.Profile, ProfileResource>(result.Resource);
             return Ok(profileResource);
         }
+
+        [HttpPost("{tagId}")]
+        public async Task<IActionResult> AssignProfileTag(int profileId, int tagId)
+        {
+
+            var result = await _profileService.AssignProfileTagAsync(profileId, tagId);
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var Resource = _mapper.Map<Tag, TagResource>(result.Resource.Tag);
+            return Ok(Resource);
+
+        }
+
+
+        [HttpPost("{userId}")]
+        public async Task<IActionResult> AssignProfileUser(int profileId, int userId)
+        {
+
+            var result = await _profileService.AssignProfileUserAsync(profileId, userId);
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var Resource = _mapper.Map<User, UserResource>(result.Resource.User);
+            return Ok(Resource);
+
+        }
     }
 }
 

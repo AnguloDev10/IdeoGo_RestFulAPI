@@ -36,5 +36,24 @@ namespace IdeoGo.API.Persistence.Repositories
         {
             _context.Goals.Update(goal);
         }
+
+        public async Task AssignGoalProject(int goalId, int projectId)
+        {
+            Goal GoalProject = await FindByIDAsync(goalId);
+            if (GoalProject == null)
+            {
+                GoalProject = new Goal { Id = goalId, ProjectId = projectId };
+                await AddAsync(GoalProject);
+            }
+        }
+
+        public async void UnassignGoalProject(int goalId, int projectId)
+        {
+            Goal GoalProject = await FindByIDAsync(goalId);
+            if (GoalProject == null)
+            {
+                Remove(GoalProject);
+            }
+        }
     }
 }

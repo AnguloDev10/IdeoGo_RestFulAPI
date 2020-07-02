@@ -15,6 +15,13 @@ namespace IdeoGo.API.Domain.Repositories
         void Remove(Profile profile);
 
         Task<Profile> FindById(int id);
+
+        Task AssignProfileUser(int profileId, int userId);
+        void UnassignProfileUser(int profileId, int userId);
+
+
+        Task AssignProfileTag(int profileId, int tagId);
+        void UnassignProfileTag(int profileId, int tagId);
     }
 
 }

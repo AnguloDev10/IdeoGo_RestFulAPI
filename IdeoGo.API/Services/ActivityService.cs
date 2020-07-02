@@ -30,7 +30,7 @@ namespace IdeoGo.API.Services
             try
             {
                 _activityRepository.Remove(existingActivity);
-
+                await _unitOfWork.CompleteAsync();
 
                 return new ActivityResponse(existingActivity);
             }
@@ -59,7 +59,7 @@ namespace IdeoGo.API.Services
             try
             {
                 await _activityRepository.AddAsync(activity);
-
+                await _unitOfWork.CompleteAsync();
                 return new ActivityResponse(activity);
             }
             catch (Exception ex)
@@ -80,12 +80,45 @@ namespace IdeoGo.API.Services
             try
             {
                 _activityRepository.Update(existingActivity);
-
+                await _unitOfWork.CompleteAsync();
                 return new ActivityResponse(existingActivity);
             }
             catch (Exception ex)
             {
                 return new ActivityResponse($"An error ocurred while updating Activity: {ex.Message}");
+            }
+
+
+        }
+
+        public async Task<ActivityResponse> AssignActivityScheduleAsync(int activityId, int scheduleId)
+        {
+            try
+            {
+
+                await _activityRepository.AssignActivitySchedule(activityId, scheduleId);
+                await _unitOfWork.CompleteAsync();
+                Activity activity = await _activityRepository.FindByIDAsync(activityId);
+                return new ActivityResponse(activity);
+            }
+            catch (Exception ex)
+            {
+                return new ActivityResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
+
+        public async Task<ActivityResponse> UnassignActivityScheduleAsync(int activityId, int scheduleId)
+        {
+            try
+            {
+                Activity activity = await _activityRepository.FindByIDAsync(activityId);
+                _activityRepository.Remove(activity);
+                await _unitOfWork.CompleteAsync();
+                return new ActivityResponse(activity);
+            }
+            catch (Exception ex)
+            {
+                return new ActivityResponse($"An error ocurred while assigning: {ex.Message}");
             }
         }
     }

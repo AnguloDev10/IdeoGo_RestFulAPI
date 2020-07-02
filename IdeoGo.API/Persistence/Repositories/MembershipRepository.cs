@@ -19,6 +19,16 @@ namespace IdeoGo.API.Persistence.Repositories
             await _context.Memberships.AddAsync(membership);
         }
 
+        public async Task AssigMembershipUser(int memberId, int userId)
+        {
+            Membership memberUser = await FindByIdAsync(memberId);
+            if (memberUser == null)
+            {
+                memberUser = new Membership { Id = memberId, UserId = userId };
+                await AddAsync(memberUser);
+            }
+        }
+
         public async Task<Membership> FindByIdAsync(int id)
         {
             return await _context.Memberships.FindAsync(id);
@@ -32,6 +42,15 @@ namespace IdeoGo.API.Persistence.Repositories
         public void Remove(Membership membership)
         {
             _context.Memberships.Remove(membership);
+        }
+
+        public async void UnassignMembershipUser(int memberId, int userId)
+        {
+            Membership memberUser = await FindByIdAsync(memberId);
+            if (memberUser == null)
+            {
+                Remove(memberUser);
+            }
         }
 
         public void Update(Membership membership)

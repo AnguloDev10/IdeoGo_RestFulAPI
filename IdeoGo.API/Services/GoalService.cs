@@ -85,5 +85,37 @@ namespace IdeoGo.API.Services
 
             throw new NotImplementedException();
         }
+
+
+        public async Task<GoalResponse> AssignGoalProjectAsync(int goalId, int projectId)
+        {
+            try
+            {
+
+                await _goalRepository.AssignGoalProject(goalId, projectId);
+                await _unitOfWork.CompleteAsync();
+                Goal goal = await _goalRepository.FindByIDAsync(goalId);
+                return new GoalResponse(goal);
+            }
+            catch (Exception ex)
+            {
+                return new GoalResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
+
+        public async Task<GoalResponse> UnassignGoalProjectAsync(int goalId, int projectId)
+        {
+            try
+            {
+                Goal goal = await _goalRepository.FindByIDAsync(goalId);
+                _goalRepository.Remove(goal);
+                await _unitOfWork.CompleteAsync();
+                return new GoalResponse(goal);
+            }
+            catch (Exception ex)
+            {
+                return new GoalResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
     }
 }

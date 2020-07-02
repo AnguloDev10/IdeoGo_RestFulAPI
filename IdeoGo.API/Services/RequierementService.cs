@@ -36,7 +36,7 @@ namespace IdeoGo.API.Services
             try
             {
                 _requierementRepository.Remove(existingRequierement);
-
+                await _unitOfWork.CompleteAsync();
 
                 return new RequierementResponse(existingRequierement);
 
@@ -78,7 +78,7 @@ namespace IdeoGo.API.Services
             try
             {
                 _requierementRepository.Update(existingRequierement);
-
+                await _unitOfWork.CompleteAsync();
                 return new RequierementResponse(existingRequierement);
             }
             catch (Exception ex)
@@ -87,6 +87,36 @@ namespace IdeoGo.API.Services
             }
 
             throw new NotImplementedException();
+        }
+
+        public async Task<RequierementResponse> AssignRequirementProjectAsync(int requirementId, int projectId)
+        {
+            try
+            {
+                await _requierementRepository.AssignRequirementProject(requirementId, projectId);
+                await _unitOfWork.CompleteAsync();
+                Requierement requierement = await _requierementRepository.FindByIdAsync(requirementId);
+                return new RequierementResponse(requierement);
+            }
+            catch (Exception ex)
+            {
+                return new RequierementResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
+
+        public async Task<RequierementResponse> UnassignRequirementProjectAsync(int requirementId, int projectId)
+        {
+            try
+            {
+                Requierement requierement = await _requierementRepository.FindByIdAsync(requirementId);
+                _requierementRepository.Remove(requierement);
+                await _unitOfWork.CompleteAsync();
+                return new RequierementResponse(requierement);
+            }
+            catch (Exception ex)
+            {
+                return new RequierementResponse($"An error ocurred while assigning: {ex.Message}");
+            }
         }
     }
 }

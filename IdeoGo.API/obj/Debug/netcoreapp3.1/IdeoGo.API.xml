@@ -4,6 +4,13 @@
         <name>IdeoGo.API</name>
     </assembly>
     <members>
+        <!-- Badly formed XML comment ignored for member "M:IdeoGo.API.Controllers.AppoitmentController.PostAsync(IdeoGo.API.Resources.SaveAppoitmentResource)" -->
         <!-- Badly formed XML comment ignored for member "M:IdeoGo.API.Controllers.ProjectTagController.AssignProjectTag(System.Int32,System.Int32)" -->
+        <member name="P:IdeoGo.API.Domain.Services.Communication.AuthenticateResponse.Datesignup">
+            public string Password { get; set; }
+        </member>
+        <member name="F:IdeoGo.API.Services.UserService._users">
+            ////////
+        </member>
     </members>
 </doc>

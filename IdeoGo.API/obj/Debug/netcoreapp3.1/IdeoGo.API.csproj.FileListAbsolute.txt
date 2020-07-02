@@ -450,3 +450,260 @@ D:\ga\IdeoGo_RestFulAPI\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.csproj.Cop
 D:\ga\IdeoGo_RestFulAPI\IdeoGo.API\obj\Debug\netcoreapp3.1\staticwebassets\IdeoGo.API.StaticWebAssets.Manifest.cache
 D:\ga\IdeoGo_RestFulAPI\IdeoGo.API\obj\Debug\netcoreapp3.1\staticwebassets\IdeoGo.API.StaticWebAssets.xml
 D:\ga\IdeoGo_RestFulAPI\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.genruntimeconfig.cache
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.exe
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.deps.json
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.runtimeconfig.json
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.runtimeconfig.dev.json
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.pdb
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.xml
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\FluentAssertions.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\MySql.Data.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Ubiety.Dns.Core.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Zstandard.Net.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\MySql.Data.EntityFrameworkCore.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Renci.SshNet.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\SshNet.Security.Cryptography.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.csprojAssemblyReference.cache
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.AssemblyInfoInputs.cache
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.AssemblyInfo.cs
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.RazorTargetAssemblyInfo.cache
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.csproj.CopyComplete
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\staticwebassets\IdeoGo.API.StaticWebAssets.Manifest.cache
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\staticwebassets\IdeoGo.API.StaticWebAssets.xml
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.xml
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.pdb
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.genruntimeconfig.cache
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.csproj.CoreCompileInputs.cache
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Ricardo\source\repos\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.exe
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.deps.json
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.runtimeconfig.json
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.runtimeconfig.dev.json
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.pdb
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.xml
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\FluentAssertions.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\MySql.Data.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Ubiety.Dns.Core.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Zstandard.Net.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\MySql.Data.EntityFrameworkCore.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Renci.SshNet.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\SshNet.Security.Cryptography.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.csprojAssemblyReference.cache
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.AssemblyInfoInputs.cache
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.AssemblyInfo.cs
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.csproj.CoreCompileInputs.cache
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.RazorTargetAssemblyInfo.cache
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.csproj.CopyComplete
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\staticwebassets\IdeoGo.API.StaticWebAssets.Manifest.cache
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\staticwebassets\IdeoGo.API.StaticWebAssets.xml
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.dll
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.xml
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.pdb
+C:\Users\ERICK PC\Downloads\ideo go descargado\27-06-2020\ApiIdeoGo\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.genruntimeconfig.cache
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.exe
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.deps.json
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.runtimeconfig.json
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.runtimeconfig.dev.json
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.pdb
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\IdeoGo.API.xml
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\FluentAssertions.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\MySql.Data.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Ubiety.Dns.Core.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Zstandard.Net.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\MySql.Data.EntityFrameworkCore.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Renci.SshNet.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\SshNet.Security.Cryptography.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.csprojAssemblyReference.cache
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.AssemblyInfoInputs.cache
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.AssemblyInfo.cs
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.RazorTargetAssemblyInfo.cache
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.csproj.CopyComplete
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\staticwebassets\IdeoGo.API.StaticWebAssets.Manifest.cache
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\staticwebassets\IdeoGo.API.StaticWebAssets.xml
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.xml
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.pdb
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.genruntimeconfig.cache
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Data.Sqlite.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\SQLitePCLRaw.core.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\alpine-x64\native\libe_sqlite3.so
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.csproj.CoreCompileInputs.cache
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\NIvra\Desktop\documentos txt\final\IdeoGo_RestFulAPI-feature-tb04\IdeoGo.API\obj\Debug\netcoreapp3.1\IdeoGo.API.MvcApplicationPartsAssemblyInfo.cache

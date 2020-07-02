@@ -1,26 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sergio_\\Desktop\\COMFOLDER\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj": {}
+    "C:\\Users\\NIvra\\Desktop\\documentos txt\\final\\IdeoGo_RestFulAPI-feature-tb04\\IdeoGo.API\\IdeoGo.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sergio_\\Desktop\\COMFOLDER\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj": {
+    "C:\\Users\\NIvra\\Desktop\\documentos txt\\final\\IdeoGo_RestFulAPI-feature-tb04\\IdeoGo.API\\IdeoGo.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sergio_\\Desktop\\COMFOLDER\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
+        "projectUniqueName": "C:\\Users\\NIvra\\Desktop\\documentos txt\\final\\IdeoGo_RestFulAPI-feature-tb04\\IdeoGo.API\\IdeoGo.API.csproj",
         "projectName": "IdeoGo.API",
-        "projectPath": "C:\\Users\\Sergio_\\Desktop\\COMFOLDER\\IdeoGo_RestFulAPI\\IdeoGo.API\\IdeoGo.API.csproj",
-        "packagesPath": "C:\\Users\\Sergio_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sergio_\\Desktop\\COMFOLDER\\IdeoGo_RestFulAPI\\IdeoGo.API\\obj\\",
+        "projectPath": "C:\\Users\\NIvra\\Desktop\\documentos txt\\final\\IdeoGo_RestFulAPI-feature-tb04\\IdeoGo.API\\IdeoGo.API.csproj",
+        "packagesPath": "C:\\Users\\NIvra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\NIvra\\Desktop\\documentos txt\\final\\IdeoGo_RestFulAPI-feature-tb04\\IdeoGo.API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Sergio_\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\NIvra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -55,6 +50,10 @@
               "target": "Package",
               "version": "[5.10.3, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.4, )"
@@ -71,6 +70,14 @@
               "target": "Package",
               "version": "[1.1.6, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
             "MySql.Data.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.20, )"
@@ -86,6 +93,10 @@
             "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
               "version": "[5.4.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.6.0, )"
             }
           },
           "imports": [
@@ -106,7 +117,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

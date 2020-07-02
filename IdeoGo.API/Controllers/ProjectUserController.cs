@@ -15,15 +15,20 @@ namespace IdeoGo.API.Controllers
     public class ProjectUserController: Controller
     {
         private readonly IUserService _userservice;
+        private readonly IProfileService _profileService;
+        private readonly IProjectService _projectService;
         private readonly IProjectUserService _projectUserService;
         private readonly IMapper _mapper;
 
 
-        public ProjectUserController(IUserService userservice, IProjectUserService projectUserService, IMapper mapper)
+        public ProjectUserController(IUserService userservice, IProjectUserService projectUserService,
+            IMapper mapper,IProfileService profileService,IProjectService projectService)
         {
             _userservice = userservice;
             _projectUserService = projectUserService;
             _mapper = mapper;
+            _profileService = profileService;
+            _projectService = projectService;
         }
 
         [HttpGet]
@@ -35,7 +40,7 @@ namespace IdeoGo.API.Controllers
             return resources;
         }
 
-        [HttpPost("{tagId}")]
+        [HttpPost("{userId}")]
         public async Task<IActionResult> AssingProject(int projectId, int userId)
         {
 
@@ -45,6 +50,24 @@ namespace IdeoGo.API.Controllers
 
             var userResource = _mapper.Map<User, UserResource>(result.Resource.User);
             return Ok(userResource);
+
+        }
+        [HttpGet("user/{userId}")]
+        public async Task<IActionResult> ListProjectByProjectUsertByUserId( int userId)
+        {
+
+            var result = await _projectService.ListByProjectUserByUserIdAsync(userId);
+            var resources = _mapper.Map<IEnumerable<Project>, IEnumerable<ProjectResource>>(result);
+            return Ok(resources);
+
+        }
+        [HttpGet("project/{projectId}")]
+        public async Task<IActionResult> ListProfileByProjectUserByProjectId(int projectId)
+        {
+
+            var result = await _profileService.ListByProjectUserByProjectIdAsync(projectId);
+            var resources = _mapper.Map<IEnumerable<Domain.Models.Profile>, IEnumerable<ProfileResource>>(result);
+            return Ok(resources);
 
         }
 

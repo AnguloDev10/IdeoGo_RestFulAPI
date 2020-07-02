@@ -36,7 +36,7 @@ namespace IdeoGo.API.Services
             try
             {
                 _resourceRepository.Remove(existingResource);
-
+                await _unitOfWork.CompleteAsync();
 
                 return new ResourceResponse(existingResource);
 
@@ -57,7 +57,7 @@ namespace IdeoGo.API.Services
             try
             {
                 await _resourceRepository.AddAsync(resource);
-
+                await _unitOfWork.CompleteAsync();
                 return new ResourceResponse(resource);
             }
             catch (Exception ex)
@@ -78,7 +78,7 @@ namespace IdeoGo.API.Services
             try
             {
                 _resourceRepository.Update(existingResource);
-
+                await _unitOfWork.CompleteAsync();
                 return new ResourceResponse(existingResource);
             }
             catch (Exception ex)

@@ -44,7 +44,7 @@ namespace IdeoGo.API.Services
             try
             {
                 await _mTaskRepository.AddAsync(mTask);
-
+                await _unitOfWork.CompleteAsync();
                 return new MTaskResponse(mTask);
             }
             catch (Exception ex)
@@ -65,7 +65,7 @@ namespace IdeoGo.API.Services
             try
             {
                 _mTaskRepository.Update(existingMTask);
-
+                await _unitOfWork.CompleteAsync();
                 return new MTaskResponse(existingMTask);
             }
             catch (Exception ex)
@@ -85,12 +85,43 @@ namespace IdeoGo.API.Services
             try
             {
                 _mTaskRepository.Remove(existingMTask);
-
+                await _unitOfWork.CompleteAsync();
                 return new MTaskResponse(existingMTask);
             }
             catch (Exception ex)
             {
                 return new MTaskResponse($"An error ocurred while deleting MTask: {ex.Message}");
+            }
+        }
+
+        public async Task<MTaskResponse> AssignTaskScheduleAsync(int taskId, int scheduleId)
+        {
+            try
+            {
+
+                await _mTaskRepository.AssignTaskSchedule(taskId, scheduleId);
+                await _unitOfWork.CompleteAsync();
+                MTask goal = await _mTaskRepository.FindById(taskId);
+                return new MTaskResponse(goal);
+            }
+            catch (Exception ex)
+            {
+                return new MTaskResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
+
+        public async Task<MTaskResponse> UnassignTaskScheduleAsync(int taskId, int scheduleId)
+        {
+            try
+            {
+                MTask task = await _mTaskRepository.FindById(taskId);
+                _mTaskRepository.Remove(task);
+                await _unitOfWork.CompleteAsync();
+                return new MTaskResponse(task);
+            }
+            catch (Exception ex)
+            {
+                return new MTaskResponse($"An error ocurred while assigning: {ex.Message}");
             }
         }
     }

@@ -25,6 +25,24 @@ namespace IdeoGo.API.Persistence.Repositories
         {
             return await _context.Aplications.ToListAsync();
         }
+        //falta implementar
+        public async Task<IEnumerable<Application>> ListByProjectIdAsync(int projectId)
+        {
+            return await _context.Aplications.AsNoTracking()
+                .Where(pt => pt.ProjectId == projectId)
+                .Include(pt => pt.User)
+                .Include(pt => pt.Project)
+                .ToListAsync();
+        }
+        //falta implementar
+        public async Task<IEnumerable<Application>> ListByUserIdAsync(int userId)
+        {
+            return await _context.Aplications.AsNoTracking()
+                .Where(pt => pt.UserId == userId)
+                .Include(pt => pt.User)
+                .Include(pt => pt.Project)
+                .ToListAsync();
+        }
 
         public void Remove(Application application)
         {
@@ -36,6 +54,43 @@ namespace IdeoGo.API.Persistence.Repositories
             _context.Aplications.Update(application);
         }
 
-      
+        public async Task AssignApplicationProject(int applicationId, int projectId)
+        {
+            Application applicationProject = await FindByIDAsync(applicationId);
+            if (applicationProject == null)
+            {
+                applicationProject = new Application { Id = applicationId, ProjectId = projectId };
+                await AddAsync(applicationProject);
+            }
+        }
+
+        public async Task AssignApplicationUser(int applicationId, int userId)
+        {
+            Application applicationUser = await FindByIDAsync(applicationId);
+            if (applicationUser == null)
+            {
+                applicationUser = new Application { Id = applicationId, UserId = userId };
+                await AddAsync(applicationUser);
+            }
+        }
+
+        public async void UnassignApplicationProject(int applicationId, int projectId)
+        {
+            Application applicationProject = await FindByIDAsync(applicationId);
+            if (applicationProject == null)
+            {
+                Remove(applicationProject);
+            }
+        }
+
+        public async void UnassignApplicationUser(int applicationId, int userId)
+        {
+            Application applicationUser = await FindByIDAsync(applicationId);
+            if (applicationUser == null)
+            {
+                Remove(applicationUser);
+            }
+        }
+
     }
 }

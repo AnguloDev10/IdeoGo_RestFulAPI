@@ -85,5 +85,19 @@ namespace IdeoGo.API.Controllers
             return Ok(requierementResource);
         }
 
+
+        [HttpPost("{projectId}")]
+        public async Task<IActionResult> AssignRequirementProject(int requierementId, int projectId)
+        {
+
+            var result = await _requierementService.AssignRequirementProjectAsync(requierementId, projectId);
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var Resource = _mapper.Map<Project, ProjectResource>(result.Resource.Project);
+            return Ok(Resource);
+
+        }
+
     }
 }

@@ -36,7 +36,7 @@ namespace IdeoGo.API.Services
             try
             {
                 _applicationRepository.Remove(existingApplication);
-
+                await _unitOfWork.CompleteAsync();
 
                 return new ApplicationResponse(existingApplication);
 
@@ -57,7 +57,7 @@ namespace IdeoGo.API.Services
             try
             {
                 await _applicationRepository.AddAsync(application);
-
+                await _unitOfWork.CompleteAsync();
                 return new ApplicationResponse(application);
             }
             catch (Exception ex)
@@ -78,7 +78,7 @@ namespace IdeoGo.API.Services
             try
             {
                 _applicationRepository.Update(existingApplication);
-
+                await _unitOfWork.CompleteAsync();
                 return new ApplicationResponse(existingApplication);
             }
             catch (Exception ex)
@@ -87,6 +87,70 @@ namespace IdeoGo.API.Services
             }
 
             throw new NotImplementedException();
+        }
+
+
+
+        public async Task<ApplicationResponse> AssignApplicationProjectAsync(int applicationId, int projectId)
+        {
+            try
+            {
+
+                await _applicationRepository.AssignApplicationProject(applicationId, projectId);
+                await _unitOfWork.CompleteAsync();
+                Application application = await _applicationRepository.FindByIDAsync(applicationId);
+                return new ApplicationResponse(application);
+            }
+            catch (Exception ex)
+            {
+                return new ApplicationResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
+
+        public async Task<ApplicationResponse> UnassignApplicationProjectAsync(int applicationId, int projectId)
+        {
+            try
+            {
+                Application application = await _applicationRepository.FindByIDAsync(applicationId);
+                _applicationRepository.Remove(application);
+                await _unitOfWork.CompleteAsync();
+                return new ApplicationResponse(application);
+            }
+            catch (Exception ex)
+            {
+                return new ApplicationResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
+
+        public async Task<ApplicationResponse> AssignApplicationUserAsync(int applicationId, int userId)
+        {
+            try
+            {
+
+                await _applicationRepository.AssignApplicationUser(applicationId, userId);
+                await _unitOfWork.CompleteAsync();
+                Application application = await _applicationRepository.FindByIDAsync(applicationId);
+                return new ApplicationResponse(application);
+            }
+            catch (Exception ex)
+            {
+                return new ApplicationResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
+
+        public async Task<ApplicationResponse> UnassignApplicationUserAsync(int applicationId, int userId)
+        {
+            try
+            {
+                Application application = await _applicationRepository.FindByIDAsync(applicationId);
+                _applicationRepository.Remove(application);
+                await _unitOfWork.CompleteAsync();
+                return new ApplicationResponse(application);
+            }
+            catch (Exception ex)
+            {
+                return new ApplicationResponse($"An error ocurred while assigning: {ex.Message}");
+            }
         }
     }
    }

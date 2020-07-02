@@ -28,6 +28,6 @@ namespace IdeoGo.API.Domain.Models
         public IList<MTask> Tasks { get; set; } = new List<MTask>();
         public IList<Activity> Activities { get; set; } = new List<Activity>();
 
-
+        public IList<Appoitment> Appoitments { get; set; } = new List<Appoitment>();
     }
 }

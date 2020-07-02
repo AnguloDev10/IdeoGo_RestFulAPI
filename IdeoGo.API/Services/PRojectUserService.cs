@@ -6,6 +6,7 @@ using IdeoGo.API.Domain.Models;
 using IdeoGo.API.Domain.Repositories;
 using IdeoGo.API.Domain.Services;
 using IdeoGo.API.Domain.Services.Communications;
+using IdeoGo.API.Persistence.Repositories;
 
 namespace IdeoGo.API.Services
 {
@@ -13,6 +14,14 @@ namespace IdeoGo.API.Services
     {
         private readonly IProjectUserRepository _projectUserRepository;
         private readonly IUnitOfWork _unitOfWork;
+
+
+        public PRojectUserService(IProjectUserRepository projectUserRepository,IUnitOfWork unitOfWork)
+        {
+            _projectUserRepository = projectUserRepository;
+            _unitOfWork = unitOfWork;
+        }
+        
 
         public async Task<ProjectUserResponse> AssignProjectUserAsync(int projectId, int userId)
         {

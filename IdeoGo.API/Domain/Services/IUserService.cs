@@ -15,5 +15,7 @@ namespace IdeoGo.API.Domain.Services
         Task<UserResponse> SaveAsync(User user);
         Task<UserResponse> UpdateAsync(int id, User user);
         Task<UserResponse> DeleteAsync(int id);
+        AuthenticateResponse Authenticate(AuthenticateRequest request);
+        IEnumerable<User> GetAll();
     }
 }

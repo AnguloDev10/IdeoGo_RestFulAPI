@@ -14,5 +14,8 @@ namespace IdeoGo.API.Domain.Repositories
 
         void Remove(Membership existingMembership);
         void Update(Membership existingMembership);
+
+        Task AssigMembershipUser(int memberId, int userId);
+        void UnassignMembershipUser(int memberId, int userId);
     }
 }

@@ -39,5 +39,23 @@ namespace IdeoGo.API.Persistence.Repositories
             _context.Activities.Remove(activity);
         }
 
+        public async Task AssignActivitySchedule(int activityId, int scheduleId)
+        {
+            Activity activitySchedule = await FindByIDAsync(activityId);
+            if (activitySchedule == null)
+            {
+                activitySchedule = new Activity { Id = activityId, ProjectScheduleId = scheduleId };
+                await AddAsync(activitySchedule);
+            }
+        }
+
+        public async void UnassignActivitySchedule(int activityId, int scheduleId)
+        {
+            Activity activitySchedule = await FindByIDAsync(activityId);
+            if (activitySchedule != null)
+            {
+                Remove(activitySchedule);
+            }
+        }
     }
 }

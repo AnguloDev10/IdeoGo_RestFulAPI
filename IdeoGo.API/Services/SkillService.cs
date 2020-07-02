@@ -35,7 +35,7 @@ namespace IdeoGo.API.Services
             try
             {
                 _skillRepository.Remove(existingSkill);
-
+                await _unitOfWork.CompleteAsync();
 
                 return new SkillResponse(existingSkill);
 
@@ -56,7 +56,7 @@ namespace IdeoGo.API.Services
             try
             {
                 await _skillRepository.AddAsync(skill);
-
+                await _unitOfWork.CompleteAsync();
                 return new SkillResponse(skill);
             }
             catch (Exception ex)
@@ -77,7 +77,7 @@ namespace IdeoGo.API.Services
             try
             {
                 _skillRepository.Update(existingSkill);
-
+                await _unitOfWork.CompleteAsync();
                 return new SkillResponse(existingSkill);
             }
             catch (Exception ex)
@@ -86,6 +86,66 @@ namespace IdeoGo.API.Services
             }
 
             throw new NotImplementedException();
+        }
+
+        public async Task<SkillResponse> AssignSkillTagAsync(int skillId, int tagId)
+        {
+            try
+            {
+                await _skillRepository.AssignSkillTag(skillId, tagId);
+                await _unitOfWork.CompleteAsync();
+                Skill skill = await _skillRepository.FindByIdAsync(skillId);
+                return new SkillResponse(skill);
+            }
+            catch (Exception ex)
+            {
+                return new SkillResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
+
+        public async Task<SkillResponse> UnassignSkillTagAsync(int skillId, int tagId)
+        {
+            try
+            {
+                Skill skill = await _skillRepository.FindByIdAsync(skillId);
+                _skillRepository.Remove(skill);
+                await _unitOfWork.CompleteAsync();
+                return new SkillResponse(skill);
+            }
+            catch (Exception ex)
+            {
+                return new SkillResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
+
+        public async Task<SkillResponse> AssignSkillProfileAsync(int skillId, int profileId)
+        {
+            try
+            {
+                await _skillRepository.AssignSkillTag(skillId, profileId);
+                await _unitOfWork.CompleteAsync();
+                Skill skill = await _skillRepository.FindByIdAsync(skillId);
+                return new SkillResponse(skill);
+            }
+            catch (Exception ex)
+            {
+                return new SkillResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
+
+        public async Task<SkillResponse> UnassignSkillProfileAsync(int skillId, int profileId)
+        {
+            try
+            {
+                Skill skill = await _skillRepository.FindByIdAsync(skillId);
+                _skillRepository.Remove(skill);
+                await _unitOfWork.CompleteAsync();
+                return new SkillResponse(skill);
+            }
+            catch (Exception ex)
+            {
+                return new SkillResponse($"An error ocurred while assigning: {ex.Message}");
+            }
         }
     }
 }

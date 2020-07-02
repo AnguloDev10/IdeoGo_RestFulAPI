@@ -18,7 +18,10 @@ namespace IdeoGo.API.Domain.Services
         Task<AppoitmentResponse> DeleteAsync(int id);
 
 
+        
 
+        Task<AppoitmentResponse> AssignAppointmentScheduleAsync(int appointId, int schedId);
+        Task<AppoitmentResponse> UnassignAppointmentScheduleAsync(int appointId, int schedId);
 
     }
 }

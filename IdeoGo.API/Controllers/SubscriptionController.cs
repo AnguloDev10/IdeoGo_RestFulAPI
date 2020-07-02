@@ -12,6 +12,9 @@ using IdeoGo.API.Extensions;
 
 namespace IdeoGo.API.Controllers
 {
+
+    [Produces("application/json")]
+    [Route("/api/[controller]")]
     public class SubscriptionController : Controller
     {
         private readonly ISubscriptionService _subscriptionService;
@@ -80,6 +83,19 @@ namespace IdeoGo.API.Controllers
                 return BadRequest(result.Message);
             var subscriptionResource = _mapper.Map<Subscription, SubscriptionResource>(result.Resource);
             return Ok(subscriptionResource);
+        }
+
+        [HttpPost("{userId}")]
+        public async Task<IActionResult> AssignSubUser(int subId, int userId)
+        {
+
+            var result = await _subscriptionService.AssignSubUserAsync(subId, userId);
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var scheduleResource = _mapper.Map<User, UserResource>(result.Resource.User);
+            return Ok(scheduleResource);
+
         }
 
     }

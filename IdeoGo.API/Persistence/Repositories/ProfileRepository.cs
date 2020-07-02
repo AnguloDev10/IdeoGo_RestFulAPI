@@ -38,5 +38,46 @@ namespace IdeoGo.API.Persistence.Repositories
         {
             _context.Profiles.Update(profile);
         }
+
+        public async Task AssignProfileTag(int profileId, int tagId)
+        {
+            Profile profileTag = await FindById(profileId);
+            if (profileTag == null)
+            {
+                profileTag = new Profile { Id = profileId, TagId = tagId };
+                await AddAsync(profileTag);
+            }
+        }
+
+        public async Task AssignProfileUser(int profileId, int userId)
+        {
+            Profile profileUser = await FindById(profileId);
+            if (profileUser == null)
+            {
+                profileUser = new Profile { Id = profileId, UserId = userId };
+                await AddAsync(profileUser);
+            }
+        }
+
+
+        public async void UnassignProfileTag(int profileId, int tagId)
+        {
+            Profile profileTag = await FindById(profileId);
+            if (profileTag == null)
+            {
+                Remove(profileTag);
+            }
+        }
+
+        public async void UnassignProfileUser(int profileId, int userId)
+        {
+            Profile profileUser = await FindById(profileId);
+            if (profileUser == null)
+            {
+                Remove(profileUser);
+            }
+        }
+
+
     }
 }

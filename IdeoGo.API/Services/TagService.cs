@@ -88,5 +88,35 @@ namespace IdeoGo.API.Services
 
             throw new NotImplementedException();
         }
+
+        public async Task<TagResponse> UnassignCategoryTagAsync(int categoryId, int tagId)
+        {
+            try
+            {
+                Tag tag = await _tagRepository.FindByIDAsync(tagId);
+                _tagRepository.Remove(tag);
+                await _unitOfWork.CompleteAsync();
+                return new TagResponse(tag);
+            }
+            catch (Exception ex)
+            {
+                return new TagResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
+
+        public async Task<TagResponse> AssignCategoryTagAsync(int categoryId, int tagId)
+        {
+            try
+            {
+                await _tagRepository.AssignCategoryTag(tagId, categoryId);
+                await _unitOfWork.CompleteAsync();
+                Tag tag = await _tagRepository.FindByIDAsync(tagId);
+                return new TagResponse(tag);
+            }
+            catch (Exception ex)
+            {
+                return new TagResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
     }
 }

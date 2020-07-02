@@ -45,7 +45,7 @@ namespace IdeoGo.API.Persistence.Repositories
 
         public async  Task<IEnumerable<ProjectUser>> ListByProjectIdAsync(int projectId)
         {
-            return await _context.ProjectUsers
+            return await _context.ProjectUsers.AsNoTracking()
                  .Where(pt => pt.ProjectId == projectId)
                  .Include(pt => pt.Project)
                  .Include(pt => pt.User)
@@ -54,7 +54,7 @@ namespace IdeoGo.API.Persistence.Repositories
 
         public async Task<IEnumerable<ProjectUser>> ListByUserIdAsync(int userId)
         {
-            return await _context.ProjectUsers
+            return await _context.ProjectUsers.AsNoTracking()
                 .Where(pt => pt.UserId == userId)
                 .Include(pt => pt.Project)
                 .Include(pt => pt.User)

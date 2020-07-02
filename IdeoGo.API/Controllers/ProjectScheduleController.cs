@@ -43,6 +43,13 @@ namespace IdeoGo.API.Controllers
             return Ok(projectScheduleResource);
 
         }
+        [HttpGet("project/{id}")]
+        public async Task<IActionResult> ListByProjectIdAsync(int id)
+        {
+            var result = await _projectScheduleService.ListByProjectIdAsync(id);
+            var resources = _mapper.Map<IEnumerable<ProjectSchedule>, IEnumerable<ProjectScheduleResource>>(result);
+            return Ok(resources);
+        }
 
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] SaveProjectScheduleResource resource)
@@ -81,5 +88,19 @@ namespace IdeoGo.API.Controllers
             var projectScheduleResource = _mapper.Map<ProjectSchedule, ProjectScheduleResource>(result.Resource);
             return Ok(projectScheduleResource);
         }
+
+        [HttpPost("{projectId}")]
+        public async Task<IActionResult> AssignScheduleProject(int scheduleId, int projectId)
+        {
+
+            var result = await _projectScheduleService.AssignScheduleProjectAsync(scheduleId, projectId);
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var Resource = _mapper.Map<Project, ProjectResource>(result.Resource.Project);
+            return Ok(Resource);
+
+        }
     }
 }
+

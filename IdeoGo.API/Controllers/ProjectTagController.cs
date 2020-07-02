@@ -16,13 +16,16 @@ namespace IdeoGo.API.Controllers
     {
         private readonly ITagService _tagService;
         private readonly IProjectTagService _projectTagService;
+        private readonly IProjectService _projectService;
         private readonly IMapper _mapper;
 
-        public ProjectTagController(ITagService tagService, IProjectTagService productTagService, IMapper mapper)
+        public ProjectTagController(ITagService tagService, IProjectTagService productTagService, IMapper mapper
+            ,IProjectService projectService)
         {
             _tagService = tagService;
             _projectTagService = productTagService;
             _mapper = mapper;
+            _projectService = projectService;
         }
 
        /// [HttpGet]
@@ -45,6 +48,13 @@ namespace IdeoGo.API.Controllers
             var tagResource = _mapper.Map<Tag, TagResource>(result.Resource.Tag);
             return Ok(tagResource);
 
+        }
+        [HttpGet("tag/{tag}")]
+        public async Task<IActionResult> ListProjectByTagNameAsync(string tag)
+        {
+            var result = await _projectService.ListByTagName(tag);
+            var resources = _mapper.Map<IEnumerable<Project>, IEnumerable<ProjectResource>>(result);
+            return Ok(resources);
         }
     }
 }

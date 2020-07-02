@@ -7,6 +7,7 @@ using IdeoGo.API.Domain.Models;
 using IdeoGo.API.Domain.Persistence.Contexts;
 using IdeoGo.API.Domain.Repositories;
 using IdeoGo.API.Persistence.Repositories;
+using FluentAssertions;
 
 namespace IdeoGo.API.Persistence.Repositories
 {
@@ -20,14 +21,27 @@ namespace IdeoGo.API.Persistence.Repositories
             await _context.Projects.AddAsync(project);
         }
 
-        public Task<Project> FindById(int id)
+        public async Task<Project> FindById(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Projects.FindAsync(id);
         }
 
         public async Task<IEnumerable<Project>> ListAsync()
         {
-            return await _context.Projects.ToListAsync();
+          
+            return await _context.Projects.Include(p=>p.ProjectLeader).ToListAsync();
+        }
+        //poner en el resto 
+        public async Task<IEnumerable<Project>> ListByProjectLeaderIdAsync(int projectLeaderId)
+        {
+            return await _context.Projects.AsNoTracking().Where(c => c.ProjectLeaderId == projectLeaderId).ToListAsync();
+        }
+
+        public async  Task<IEnumerable<Project>> ListBytagName(string tag)
+        {
+            return await _context.Projects
+                .Where(p => p.Tag.Name == tag)
+                .ToListAsync();
         }
 
         public void Remove(Project project)
@@ -39,5 +53,44 @@ namespace IdeoGo.API.Persistence.Repositories
         {
             _context.Projects.Update(project);
         }
+
+        public async Task AssignProjectLeader(int projectId, int userId)
+        {
+            Project projectLeader = await FindById(projectId);
+            if (projectLeader == null)
+            {
+                projectLeader = new Project { Id = projectId, ProjectLeaderId = userId };
+                await AddAsync(projectLeader);
+            }
+        }
+
+        public async Task AssignProjectTag(int projectId, int tagId)
+        {
+            Project projectTag = await FindById(projectId);
+            if (projectTag == null)
+            {
+                projectTag = new Project { Id = projectId, TagId = tagId };
+                await AddAsync(projectTag);
+            }
+        }
+
+        public async void UnassignProjectLeader(int projectId, int userId)
+        {
+            Project projectLeader = await FindById(projectId);
+            if (projectLeader == null)
+            {
+                Remove(projectLeader);
+            }
+        }
+
+        public async void UnassignProjectTag(int projectId, int tagId)
+        {
+            Project projectTag = await FindById(projectId);
+            if (projectTag == null)
+            {
+                Remove(projectTag);
+            }
+        }
+
     }
 }

@@ -11,7 +11,7 @@ namespace IdeoGo.API.Resources
 
         public string Name { get; set; }
 
-        public EGender Gender { get; set; }
+        public string  Gender { get; set; }
 
         public string Occupation { get; set; }
 

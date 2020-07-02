@@ -29,7 +29,7 @@ namespace IdeoGo.API.Services
             try
             {
                 _projectScheduleRepository.Remove(existingProjectSchedule);
-
+                await _unitOfWork.CompleteAsync();
 
                 return new ProjectScheduleResponse(existingProjectSchedule);
             }
@@ -58,7 +58,7 @@ namespace IdeoGo.API.Services
             try
             {
                 await _projectScheduleRepository.AddAsync(projectSchedule);
-
+                await _unitOfWork.CompleteAsync();
                 return new ProjectScheduleResponse(projectSchedule);
             }
             catch (Exception ex)
@@ -79,12 +79,49 @@ namespace IdeoGo.API.Services
             try
             {
                 _projectScheduleRepository.Update(existingProjectSchedule);
-
+                await _unitOfWork.CompleteAsync();
                 return new ProjectScheduleResponse(existingProjectSchedule);
             }
             catch (Exception ex)
             {
                 return new ProjectScheduleResponse($"An error ocurred while updating ProjectSchedule: {ex.Message}");
+            }
+        }
+
+        public async Task<IEnumerable<ProjectSchedule>> ListByProjectIdAsync(int projectId)
+        {
+            return await _projectScheduleRepository.ListByProjectIdAsync(projectId);
+        }
+
+
+
+        public async Task<ProjectScheduleResponse> AssignScheduleProjectAsync(int scheduleId, int projectId)
+        {
+            try
+            {
+                await _projectScheduleRepository.AssignScheduleProject(scheduleId, projectId);
+                await _unitOfWork.CompleteAsync();
+                ProjectSchedule projectSchedule = await _projectScheduleRepository.FindById(scheduleId);
+                return new ProjectScheduleResponse(projectSchedule);
+            }
+            catch (Exception ex)
+            {
+                return new ProjectScheduleResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
+
+        public async Task<ProjectScheduleResponse> UnassignScheduleProjectAsync(int scheduleId, int projectId)
+        {
+            try
+            {
+                ProjectSchedule projectSchedule = await _projectScheduleRepository.FindById(scheduleId);
+                _projectScheduleRepository.Remove(projectSchedule);
+                await _unitOfWork.CompleteAsync();
+                return new ProjectScheduleResponse(projectSchedule);
+            }
+            catch (Exception ex)
+            {
+                return new ProjectScheduleResponse($"An error ocurred while assigning: {ex.Message}");
             }
         }
     }

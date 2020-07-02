@@ -1,14 +1,18 @@
 ﻿using AutoMapper;
 using IdeoGo.API.Domain.Models;
 using IdeoGo.API.Domain.Services;
+using IdeoGo.API.Domain.Services.Communication;
 using IdeoGo.API.Extensions;
 using IdeoGo.API.Resources;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace IdeoGo.API.Controllers
 {
+    [Authorize]
+    [ApiController]
     [Produces("application/json")]
     [Route("/api/[controller]")]
     public class UserController : Controller
@@ -83,6 +87,23 @@ namespace IdeoGo.API.Controllers
             var userResource = _mapper.Map<User, UserResource>(result.Resource);
             return Ok(userResource);
         }
+
+
+        
+
+
+        [AllowAnonymous]
+        [HttpPost("authenticate")]
+        public IActionResult Authenticate([FromBody] AuthenticateRequest request)
+        {
+            var response = _userService.Authenticate(request);
+            if (response == null)
+                return BadRequest(new { message = "Invalid Username or Password" });
+
+            return Ok(response);
+        }
+
+
     }
 }
 

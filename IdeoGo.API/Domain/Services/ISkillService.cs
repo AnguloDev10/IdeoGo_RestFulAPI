@@ -16,5 +16,11 @@ namespace IdeoGo.API.Domain.Services
         Task<SkillResponse> UpdateAsync(int id, Skill skill);
         Task<SkillResponse> DeleteAsync(int id);
 
+        Task<SkillResponse> AssignSkillTagAsync(int skillId, int tagId);
+        Task<SkillResponse> UnassignSkillTagAsync(int skillId, int tagId);
+
+        Task<SkillResponse> AssignSkillProfileAsync(int skillId, int profileId);
+        Task<SkillResponse> UnassignSkillProfileAsync(int skillId, int profileId);
+
     }
 }

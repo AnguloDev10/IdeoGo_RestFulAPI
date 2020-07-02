@@ -14,5 +14,8 @@ namespace IdeoGo.API.Domain.Services
         Task<ActivityResponse> SaveAsync(Activity activity);
         Task<ActivityResponse> UpdateAsync(int id, Activity activity);
         Task<ActivityResponse> DeleteAsync(int id);
+
+        Task<ActivityResponse> AssignActivityScheduleAsync(int activityId, int scheduleId);
+        Task<ActivityResponse> UnassignActivityScheduleAsync(int activityId, int scheduleId);
     }
 }

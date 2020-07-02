@@ -37,5 +37,44 @@ namespace IdeoGo.API.Persistence.Repositories
         {
             _context.Skills.Update(skill);
         }
+
+        public async Task AssignSkillProfile(int skillId, int profileId)
+        {
+            Skill skillProfile = await FindByIdAsync(skillId);
+            if (skillProfile == null)
+            {
+                skillProfile = new Skill { Id = skillId, UserProfileId = profileId };
+                await AddAsync(skillProfile);
+            }
+        }
+
+        public async Task AssignSkillTag(int skillId, int tagId)
+        {
+            Skill skillTag = await FindByIdAsync(skillId);
+            if (skillTag == null)
+            {
+                skillTag = new Skill { Id = skillId, TagId = tagId };
+                await AddAsync(skillTag);
+            }
+        }
+
+        public async void UnassignSkillProfile(int skillId, int profileId)
+        {
+            Skill skillProfile = await FindByIdAsync(skillId);
+            if (skillProfile == null)
+            {
+                Remove(skillProfile);
+            }
+        }
+
+        public async void UnassignSkillTag(int skillId, int tagId)
+        {
+            Skill skillTag = await FindByIdAsync(skillId);
+            if (skillTag == null)
+            {
+                Remove(skillTag);
+            }
+        }
+
     }
 }

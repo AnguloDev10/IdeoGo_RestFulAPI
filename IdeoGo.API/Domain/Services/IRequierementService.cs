@@ -15,5 +15,8 @@ namespace IdeoGo.API.Domain.Services
 
         Task<RequierementResponse> UpdateAsync(int id, Requierement requierement);
         Task<RequierementResponse> DeleteAsync(int id);
+
+        Task<RequierementResponse> AssignRequirementProjectAsync(int requirementId, int projectId);
+        Task<RequierementResponse> UnassignRequirementProjectAsync(int requirementId, int projectId);
     }
 }

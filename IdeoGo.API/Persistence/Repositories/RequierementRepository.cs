@@ -37,5 +37,25 @@ namespace IdeoGo.API.Persistence.Repositories
         {
             _context.Requierements.Update(requierement);
         }
+
+        public async Task AssignRequirementProject(int requirementId, int projectId)
+        {
+            Requierement requirementProject = await FindByIdAsync(requirementId);
+            if (requirementProject == null)
+            {
+                requirementProject = new Requierement { Id = requirementId, ProjectId = projectId };
+                await AddAsync(requirementProject);
+            }
+        }
+
+
+        public async void UnassignRequirementProject(int requirementId, int projectId)
+        {
+            Requierement requirementProject = await FindByIdAsync(requirementId);
+            if (requirementProject == null)
+            {
+                Remove(requirementProject);
+            }
+        }
     }
 }

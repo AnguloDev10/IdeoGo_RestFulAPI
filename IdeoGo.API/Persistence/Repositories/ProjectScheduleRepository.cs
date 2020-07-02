@@ -39,5 +39,28 @@ namespace IdeoGo.API.Persistence.Repositories
             _context.ProjectsSchedules.Remove(projectSchedule);
         }
 
+        public async Task<IEnumerable<ProjectSchedule>> ListByProjectIdAsync(int projectId)
+        {
+            return await _context.ProjectsSchedules.Where(p => p.ProjectId == projectId).ToListAsync();
+        }
+
+        public async Task AssignScheduleProject(int scheduleId, int projectId)
+        {
+            ProjectSchedule scheduleProject = await FindById(scheduleId);
+            if (scheduleProject == null)
+            {
+                scheduleProject = new ProjectSchedule { Id = scheduleId, ProjectId = projectId };
+                await AddAsync(scheduleProject);
+            }
+        }
+
+        public async void UnassignScheduleProject(int scheduleId, int projectId)
+        {
+            ProjectSchedule scheduleProject = await FindById(scheduleId);
+            if (scheduleProject == null)
+            {
+                Remove(scheduleProject);
+            }
+        }
     }
 }

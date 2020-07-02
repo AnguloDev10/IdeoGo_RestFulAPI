@@ -30,7 +30,7 @@ namespace IdeoGo.API.Services
             try
             {
                 _membershipRepository.Remove(existingMembership);
-
+                await _unitOfWork.CompleteAsync();
 
                 return new MembershipResponse(existingMembership);
 
@@ -51,7 +51,7 @@ namespace IdeoGo.API.Services
             try
             {
                 await _membershipRepository.AddAsync(membership);
-
+                await _unitOfWork.CompleteAsync();
                 return new MembershipResponse(membership);
             }
             catch (Exception ex)
@@ -83,7 +83,7 @@ namespace IdeoGo.API.Services
             try
             {
                 _membershipRepository.Update(existingMembership);
-
+                await _unitOfWork.CompleteAsync();
                 return new MembershipResponse(existingMembership);
             }
             catch (Exception ex)
@@ -92,5 +92,35 @@ namespace IdeoGo.API.Services
             }
         }
 
+        public async Task<MembershipResponse> AssignMemberUserAsync(int memberId, int userId)
+        {
+            try
+            {
+
+                await _membershipRepository.AssigMembershipUser(memberId, userId);
+                await _unitOfWork.CompleteAsync();
+                Membership goal = await _membershipRepository.FindByIdAsync(memberId);
+                return new MembershipResponse(goal);
+            }
+            catch (Exception ex)
+            {
+                return new MembershipResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
+
+        public async Task<MembershipResponse> UnassignMemberUserAsync(int memberId, int userId)
+        {
+            try
+            {
+                Membership goal = await _membershipRepository.FindByIdAsync(memberId);
+                _membershipRepository.Remove(goal);
+                await _unitOfWork.CompleteAsync();
+                return new MembershipResponse(goal);
+            }
+            catch (Exception ex)
+            {
+                return new MembershipResponse($"An error ocurred while assigning: {ex.Message}");
+            }
+        }
     }
 }

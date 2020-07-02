@@ -13,6 +13,9 @@ namespace IdeoGo.API.Domain.Repositories
         void Update(Goal goal);
         void Remove(Goal goal);
         Task<Goal> FindByIDAsync(int id);
+
+        Task AssignGoalProject(int goalId, int projectId);
+        void UnassignGoalProject(int goalId, int projectId);
     }
 }
 

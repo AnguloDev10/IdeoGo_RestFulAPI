@@ -13,35 +13,35 @@ namespace IdeoGo.API.Controllers
 {
     [Produces("application/json")]
     [Route("/api/[controller]")]
-    public class CategoryController : Controller
+    public class TagController : Controller
     {
-        private readonly ICategoryService _categoryService;
+        private readonly ITagService _tagService;
         private readonly IMapper _mapper;
 
-        public CategoryController(ICategoryService categoryService, IMapper mapper)
+        public TagController(ITagService tagService, IMapper mapper)
         {
-            _categoryService = categoryService;
+            _tagService = tagService;
             _mapper = mapper;
         }
 
         [HttpGet]
-        public async Task<IEnumerable<CategoryResource>> GetAllAsync()
+        public async Task<IEnumerable<TagResource>> GetAllAsync()
         {
-            var categories = await _categoryService.ListAsync();
-            var resources = _mapper.Map<IEnumerable<Category>, IEnumerable<CategoryResource>>(categories);
+            var categories = await _tagService.ListAsync();
+            var resources = _mapper.Map<IEnumerable<Tag>, IEnumerable<TagResource>>(categories);
             return resources;
         }
 
 
         [HttpPost]
-        public async Task<IActionResult> PostAsync([FromBody] SaveCategoryResource resource)
+        public async Task<IActionResult> PostAsync([FromBody] SaveTagResource resource)
         {
-           if (!ModelState.IsValid)
-                 return BadRequest(ModelState.GetErrorMessages());
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
 
-            var categories = _mapper.Map<SaveCategoryResource, Category>(resource);
+            var categories = _mapper.Map<SaveTagResource, Tag>(resource);
 
-            var result = await _categoryService.SaveAsync(categories);
+            var result = await _tagService.SaveAsync(categories);
 
 
 
@@ -49,23 +49,23 @@ namespace IdeoGo.API.Controllers
                 return BadRequest(result.Message);
 
 
-            var tagResource = _mapper.Map<Category, CategoryResource>(result.Resource);
+            var tagResource = _mapper.Map<Tag, TagResource>(result.Resource);
 
             return Ok(tagResource);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutAsync(int id, SaveCategoryResource resource)
+        public async Task<IActionResult> PutAsync(int id, SaveTagResource resource)
         {
-            var category = _mapper.Map<SaveCategoryResource, Category>(resource);
-            var result = await _categoryService.UpdateAsync(id, category);
+            var category = _mapper.Map<SaveTagResource, Tag>(resource);
+            var result = await _tagService.UpdateAsync(id, category);
 
             if (!result.Success)
             {
                 return BadRequest(result.Message);
             }
 
-            var categoryResource = _mapper.Map<Category, CategoryResource>(result.Resource);
+            var categoryResource = _mapper.Map<Tag, TagResource>(result.Resource);
             return Ok(categoryResource);
         }
 
@@ -73,15 +73,29 @@ namespace IdeoGo.API.Controllers
         public async Task<IActionResult> DeleteAsync(int id)
         {
 
-            var result = await _categoryService.DeleteAsync(id);
+            var result = await _tagService.DeleteAsync(id);
 
             if (!result.Success)
             {
                 return BadRequest(result.Message);
             }
 
-            var tagResource = _mapper.Map<Category, CategoryResource>(result.Resource);
+            var tagResource = _mapper.Map<Tag, TagResource>(result.Resource);
             return Ok(tagResource);
+        }
+
+
+        [HttpPost("{profileId}")]
+        public async Task<IActionResult> AssignCategoryTag(int tag, int categoryId)
+        {
+
+            var result = await _tagService.AssignCategoryTagAsync(tag, categoryId);
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var Resource = _mapper.Map<Category, CategoryResource>(result.Resource.Category);
+            return Ok(Resource);
+
         }
     }
 }

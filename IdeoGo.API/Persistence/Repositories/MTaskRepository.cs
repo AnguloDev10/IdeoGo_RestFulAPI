@@ -39,5 +39,24 @@ namespace IdeoGo.API.Persistence.Repositories
         {
             _context.Tasks.Remove(mTask);
         }
+
+        public async Task AssignTaskSchedule(int taskId, int scheduleId)
+        {
+            MTask taskSchedule = await FindById(taskId);
+            if (taskSchedule == null)
+            {
+                taskSchedule = new MTask { Id = taskId, ProjectScheduleId = scheduleId };
+                await AddAsync(taskSchedule);
+            }
+        }
+
+        public async void UnassignTaskSchedule(int taskId, int scheduleId)
+        {
+            MTask taskSchedule = await FindById(taskId);
+            if (taskSchedule == null)
+            {
+                Remove(taskSchedule);
+            }
+        }
     }
 }

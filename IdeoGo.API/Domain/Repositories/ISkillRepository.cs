@@ -13,5 +13,11 @@ namespace IdeoGo.API.Domain.Repositories
         void Update(Skill skill);
         void Remove(Skill skill);
         Task<Skill> FindByIdAsync(int id);
+
+        Task AssignSkillTag(int skillId, int tagId);
+        void UnassignSkillTag(int skillId, int tagId);
+
+        Task AssignSkillProfile(int skillId, int profileId);
+        void UnassignSkillProfile(int skillId, int profileId);
     }
 }

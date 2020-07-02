@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiRB+9XsHxU+593g/V/f7QgAAAAACAAAAAAAQZgAAAAEAACAAAACPiFLS6oKZQ13gfmv7fIn25GiLaWuCxZnRbCvBhZ5V3gAAAAAOgAAAAAIAACAAAADleQAS3j/FJ7QBCLuLUjWxtQ6UC0xajjrZetA9fIV9m4AAAACYneOwZBoyZOloz8Vo17ylrJcsz145nVQ52/NX0NAk9rpAKn5SUmqu8YnDFVLkJ7az3dMCKTQ5R3A7ioXVIZN0PUIhjzfdgatxDFJ6tJzjppHRxYUytEbPYrC5RaGWC1+CvLEW9z6VjxuZZnllX7QPkESv4CG0FNOiFFCqynJsVUAAAACGjvIBWeGtNTUo2CCn2rgV2hQx3aQ6XObMCksyLou12MC556J4sGB7cNA+mRFkmmOu5xULq1HoTtWMhEV9sdUX</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="MvcMovieContext">
+      <Value>Data Source=MvcMovie.db</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

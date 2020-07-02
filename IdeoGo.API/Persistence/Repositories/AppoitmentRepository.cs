@@ -40,5 +40,27 @@ namespace IdeoGo.API.Persistence.Repositories
         {
             _context.Appoitments.Update(appoitment);
         }
+
+  
+
+        public async Task AssignAppointmentSchedule(int appointId, int schedId)
+        {
+            Appoitment appointmentSchedule = await FindByIDAsync(appointId);
+            if (appointmentSchedule == null)
+            {
+                appointmentSchedule = new Appoitment { Id = appointId, ProjectScheduleId = schedId };
+                await AddAsync(appointmentSchedule);
+            }
+        }
+
+
+        public async void UnassignAppointmentSchedule(int appointId, int schedId)
+        {
+            Appoitment appointmentSchedule = await FindByIDAsync(appointId);
+            if (appointmentSchedule == null)
+            {
+                Remove(appointmentSchedule);
+            }
+        }
     }
 }

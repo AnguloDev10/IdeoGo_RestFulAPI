@@ -21,6 +21,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using FluentAssertions.Common;
+using IdeoGo.API.Settings;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 namespace IdeoGo.API
 {
@@ -38,13 +42,36 @@ namespace IdeoGo.API
         {
             services.AddControllers();
 
+            var appSettingsSection = Configuration.GetSection("AppSettings");
+            services.Configure<AppSettings>(appSettingsSection);
+
+            ///JWT Auth Config
+            var appSettings = appSettingsSection.Get<AppSettings>();
+            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+                .AddJwtBearer(x =>
+                {
+                    x.RequireHttpsMetadata = false;
+                    x.SaveToken = true;
+                    x.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(key),
+                        ValidateIssuer = false,
+                        ValidateAudience = false
+                    };
+                });
 
             /////////////////////New
 
             services.AddDbContext<AppDbContext>(options =>
             {
                 //options.UseInMemoryDatabase("IdeoGo-api-in-memory");
-                options.UseMySQL(Configuration.GetConnectionString("DefaultConnection"));
+                options.UseSqlite(Configuration.GetConnectionString("MvcMovieContext"));
             });
 
             services.AddScoped<ICategoryRepository, CategoryRepository>();
@@ -68,10 +95,10 @@ namespace IdeoGo.API
             services.AddScoped<IActivityRepository, ActivityRepository>();
             services.AddScoped<IMTaskRepository, MTaskRepository>();
 
-
+            services.AddScoped<IUserService, UserService>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<ITagService, TagService>();
-            services.AddScoped<IUserService, UserService>();
+            
             services.AddScoped<IProfileService, ProfileService>();
             services.AddScoped<IRequierementService, RequierementService>();
             services.AddScoped<IResourceService, ResourceService>();
@@ -122,7 +149,7 @@ namespace IdeoGo.API
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+           
 
          
             app.UseSwagger();
@@ -131,9 +158,20 @@ namespace IdeoGo.API
                  c.SwaggerEndpoint("/swagger/v1/swagger.json", "Ideogo.API V1");
             });
 
-            app.UseRouting();
-            app.UseAuthorization();
+            app.UseHttpsRedirection();
 
+            app.UseRouting();
+
+            ///CORS Config
+            app.UseCors(x => x.
+            AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+
+            app.UseAuthorization();
+            /////
+            app.UseAuthentication();
+            //////
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
