@@ -16,5 +16,12 @@ namespace IdeoGo.API.Resources
 
         [MaxLength(150)]
         public string Description { get; set; }
+        
+        [MaxLength(15)]
+        public int ProjectScheduleId { get; set; }
+
+
+        [MaxLength(15)]
+        public int ProjectId { get; set; }
     }
 }
