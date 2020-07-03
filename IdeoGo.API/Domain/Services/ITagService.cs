@@ -12,7 +12,11 @@ namespace IdeoGo.API.Domain.Services
         Task<IEnumerable<Tag>> ListAsync();
         Task<TagResponse> SaveAsync(Tag tag);
 
+        Task<IEnumerable<Tag>> ListByCategoryIdAsync(int categoryId);
         Task<TagResponse> UpdateAsync(int id, Tag tag);
         Task<TagResponse> DeleteAsync(int id);
+
+        Task<TagResponse> AssignCategoryTagAsync(int categoryId, int tagId);
+        Task<TagResponse> UnassignCategoryTagAsync(int categoryId, int tagId);
     }
 }

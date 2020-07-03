@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using IdeoGo.API.Domain.Models;
 using IdeoGo.API.Domain.Services;
+using IdeoGo.API.Extensions;
 using IdeoGo.API.Resources;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Controllers
 {
+    [Produces("application/json")]
     [Route("/api/[controller]")]
     public class GoalController : Controller
     {
@@ -35,12 +37,12 @@ namespace IdeoGo.API.Controllers
         
 
         [HttpPost]
-        public async Task<IActionResult> PostAsync([FromBody] SaveTagResource resource)
+        public async Task<IActionResult> PostAsync([FromBody] SaveGoalResource resource)
         {
-           // if (!ModelState.IsValid)
-           //     return BadRequest(ModelState.GetErrorMessages());
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
 
-            var goal = _mapper.Map<SaveTagResource, Goal>(resource); 
+            var goal = _mapper.Map<SaveGoalResource, Goal>(resource); 
 
             var result = await _goalService.SaveAsync(goal); 
 
@@ -51,9 +53,9 @@ namespace IdeoGo.API.Controllers
 
             //
 
-            var categoryResource = _mapper.Map<Goal, GoalResource>(result.Goal);
+            var goalResource = _mapper.Map<Goal, GoalResource>(result.Resource);
 
-            return Ok(categoryResource);
+            return Ok(goalResource);
         }
 
         [HttpPut("{id}")]
@@ -67,8 +69,8 @@ namespace IdeoGo.API.Controllers
                 return BadRequest(result.Message);
             }
 
-            var categoryResource = _mapper.Map<Goal, GoalResource>(result.Goal);
-            return Ok(categoryResource);
+            var goalResource = _mapper.Map<Goal, GoalResource>(result.Resource);
+            return Ok(goalResource);
         }
 
         [HttpDelete("{id}")]
@@ -82,8 +84,21 @@ namespace IdeoGo.API.Controllers
                 return BadRequest(result.Message);
             }
 
-            var categoryResource = _mapper.Map<Goal, GoalResource>(result.Goal);
-            return Ok(categoryResource);
+            var goalResource = _mapper.Map<Goal, GoalResource>(result.Resource);
+            return Ok(goalResource);
+        }
+
+        [HttpPost("{projectId}")]
+        public async Task<IActionResult> AssignGoalProject(int goalId, int projectId)
+        {
+
+            var result = await _goalService.AssignGoalProjectAsync(goalId, projectId);
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var scheduleResource = _mapper.Map<Project, ProjectResource>(result.Resource.Project);
+            return Ok(scheduleResource);
+
         }
     }
 }

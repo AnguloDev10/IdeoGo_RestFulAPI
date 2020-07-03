@@ -6,26 +6,14 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Domain.Services.Communication
 {
-    public class TagResponse : BaseResponse
+    public class TagResponse : BaseResponse<Tag>
     {
 
-        public Tag Tag { get; private set; }
-
-        public TagResponse(bool success, string message, Tag tag) : base(success, message) ///pasa la llamada a el constructor del padre
+        public TagResponse(Tag tag) : base(tag)
         {
-            Tag = tag;
         }
 
-
-        public TagResponse(Tag tag) : this(true, string.Empty, tag)
-        {
-            //Escenario feliz
-        }
-
-        public TagResponse(string message) : this(false, message, null)
-        {
-            ///Escenario triste
-        }
+        public TagResponse(string message) : base(message) { }
 
 
     }

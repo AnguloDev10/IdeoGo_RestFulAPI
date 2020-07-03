@@ -1,15 +1,19 @@
 ﻿using AutoMapper;
 using IdeoGo.API.Domain.Models;
 using IdeoGo.API.Domain.Services;
+using IdeoGo.API.Domain.Services.Communication;
+using IdeoGo.API.Extensions;
 using IdeoGo.API.Resources;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace IdeoGo.API.Controllers
 {
+    //[Authorize]
+    [ApiController]
+    [Produces("application/json")]
     [Route("/api/[controller]")]
     public class UserController : Controller
     {
@@ -31,15 +35,16 @@ namespace IdeoGo.API.Controllers
         }
 
 
+
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] SaveUserResource resource)
         {
-            // if (!ModelState.IsValid)
-            //     return BadRequest(ModelState.GetErrorMessages());
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
 
-            var goal = _mapper.Map<SaveUserResource, User>(resource);
+            var user = _mapper.Map<SaveUserResource, User>(resource);
 
-            var result = await _userService.SaveAsync(goal);
+            var result = await _userService.SaveAsync(user);
 
 
 
@@ -48,23 +53,23 @@ namespace IdeoGo.API.Controllers
 
             //
 
-            var categoryResource = _mapper.Map<User, UserResource>(result.User);
+            var userResource = _mapper.Map<User, UserResource>(result.Resource);
 
-            return Ok(categoryResource);
+            return Ok(userResource);
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAsync(int id, SaveUserResource resource)
         {
-            var goal = _mapper.Map<SaveUserResource, User>(resource);
-            var result = await _userService.UpdateAsync(id, goal);
+            var user = _mapper.Map<SaveUserResource, User>(resource);
+            var result = await _userService.UpdateAsync(id, user);
 
             if (!result.Success)
             {
                 return BadRequest(result.Message);
             }
 
-            var categoryResource = _mapper.Map<User, UserResource>(result.User);
+            var categoryResource = _mapper.Map<User, UserResource>(result.Resource);
             return Ok(categoryResource);
         }
 
@@ -79,9 +84,26 @@ namespace IdeoGo.API.Controllers
                 return BadRequest(result.Message);
             }
 
-            var categoryResource = _mapper.Map<User, UserResource>(result.User);
-            return Ok(categoryResource);
+            var userResource = _mapper.Map<User, UserResource>(result.Resource);
+            return Ok(userResource);
         }
+
+
+        
+
+
+        [AllowAnonymous]
+        [HttpPost("authenticate")]
+        public IActionResult Authenticate([FromBody] AuthenticateRequest request)
+        {
+            var response = _userService.Authenticate(request);
+            if (response == null)
+                return BadRequest(new { message = "Invalid Username or Password" });
+
+            return Ok(response);
+        }
+
+
     }
 }
 

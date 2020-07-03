@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using IdeoGo.API.Domain.Models;
 using IdeoGo.API.Domain.Services;
+using IdeoGo.API.Extensions;
 using IdeoGo.API.Resources;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -11,13 +12,12 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Controllers
 {
-    [Route("/api/[controller]")]//va a asociarse con las routas 
-    public class CategoriesController:Controller
+    [Produces("application/json")]
+    [Route("/api/[controller]")]
+    public class CategoriesController : Controller
     {
-        //es una clase normal
-        ///controler // net core 2 requisitos: catgorioescomntreoller debe descender de la clase controller y la clase controler esta en un paquete mvc del using, que dice que se comporta segun el patron mvc
-        //
-        private readonly ICategoryService _categoryService;//UN AQTRIBUTO DE SOLO LECTURA
+       
+        private readonly ICategoryService _categoryService;
         private readonly IMapper _mapper; 
         public CategoriesController(ICategoryService categoryService, IMapper mapper)
         {
@@ -26,11 +26,50 @@ namespace IdeoGo.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<GoalResource>> GetAllAsync()
+        public async Task<IEnumerable<CategoryResource>> GetAllAsync()
         {
             var categories = await _categoryService.ListAsync();
-            var resources = _mapper.Map<IEnumerable<Category>, IEnumerable<GoalResource>>(categories);
+            var resources = _mapper.Map<IEnumerable<Category>, IEnumerable<CategoryResource>>(categories);
             return resources;
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> PostAsync([FromBody] SaveCategoryResource resource)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
+            var appoint = _mapper.Map<SaveCategoryResource, Category>(resource);
+            var result = await _categoryService.SaveAsync(appoint);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var appointmentResource = _mapper.Map<Category, CategoryResource>(result.Resource);
+            return Ok(appointmentResource);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutAsync(int id, [FromBody] SaveCategoryResource resource)
+        {
+            var appoint = _mapper.Map<SaveCategoryResource, Category>(resource);
+            var result = await _categoryService.UpdateAsync(id, appoint);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+            var mTaskResource = _mapper.Map<Category, CategoryResource>(result.Resource);
+            return Ok(mTaskResource);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAsync(int id)
+        {
+            var result = await _categoryService.DeleteAsync(id);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+            var appontResource = _mapper.Map<Category, CategoryResource>(result.Resource);
+            return Ok(appontResource);
         }
     }
 }

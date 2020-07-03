@@ -6,26 +6,14 @@ using System.Threading.Tasks;
 
 namespace IdeoGo.API.Domain.Services.Communication
 {
-    public class UserResponse : BaseResponse
+    public class UserResponse : BaseResponse<User>
     {
 
-        public User User { get; private set; }
-
-        public UserResponse(bool success, string message, User user) : base(success, message) ///pasa la llamada a el constructor del padre
+        public UserResponse(User user) : base(user)
         {
-            User = user;
         }
 
-
-        public UserResponse(User user) : this(true, string.Empty, user)
-        {
-            //Escenario feliz
-        }
-
-        public UserResponse(string message) : this(false, message, null)
-        {
-            ///Escenario triste
-        }
+        public UserResponse(string message) : base(message) { }
 
 
     }
